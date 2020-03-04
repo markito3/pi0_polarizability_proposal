@@ -14,13 +14,14 @@ TheoreticalPredictions.tex
 
 all : $(DOCROOT).pdf
 
-$(DOCROOT).pdf : $(TEX_FILES) $(DOCROOT).bbl
+$(DOCROOT).pdf : $(DOCROOT).bbl
 	pdflatex $(PDFLATEXFLAGS) $(DOCROOT)
 	pdflatex $(PDFLATEXFLAGS) $(DOCROOT)
 
-$(DOCROOT).bbl : $(DOCROOT).bib $(TEX_FILES)
-	pdflatex $(PDFLATEXFLAGS) $(DOCROOT)
+$(DOCROOT).bbl : $(DOCROOT).bib $(DOCROOT).aux.for_bib
+	cp -pv $(DOCROOT).aux.for_bib $(DOCROOT).aux
 	bibtex $(DOCROOT)
 
-$(DOCROOT).aux:
+$(DOCROOT).aux.for_bib: $(TEX_FILES)
 	pdflatex $(PDFLATEXFLAGS) $(DOCROOT)
+	mv -v $(DOCROOT).aux $(DOCROOT).aux.for_bib
