@@ -31,7 +31,7 @@
 #     Pi0Polarizability  Proposal - Elton Smith 2/6/2020  -- use pdflatex
 #
 #
-TEX_FILES_0 = Pi0Polarizability
+TEX_FILES_0 = Pi0Polarizability JLAB_Backgrounds Appendix_NCSwave
 
 TEX_FILES = $(addsuffix .tex,$(TEX_FILES_0)) # add .tex suffix
 

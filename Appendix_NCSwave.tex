@@ -1,0 +1,126 @@
+\section{Parameterization of the nuclear coherent production  \label{sec:NCsigma}}
+We consider the reaction $\gamma A \rightarrow m_{\pi\pi} A$, where $m_{\pi\pi}\rightarrow \pi\pi$ is a dipion system.
+The $2\pi$ system is treated as a particle with mass $m_{\pi\pi}$, which is produced with  four-momentum transfer $t$.  
+The cross section for a three-body final state can be written as \cite{BNLQGS020900}:
+\begin{eqnarray}
+d\sigma & = & \frac{1}{4\mathcal{F}} \, d\phi_3 \, |\mathcal{A}|^2 \\
+\mathcal{F} & = & p_\gamma^{cm} \sqrt{s} \\
+d\phi_3 & = & \frac{4}{(4\pi)^5} {p_\sigma^{cm} \over \sqrt{s}} d\Omega_\sigma^{cm}\, p_\pi^{\sigma} dm_{\pi\pi} d\Omega_\pi^{\sigma} \\
+{dt \over d\Omega_\sigma^{cm} } & = & {dt \over d\cos{\theta}_\sigma^{cm} d\phi_\sigma^{cm} } = {2\, p_\gamma^{cm} p_\sigma^{cm}  \over d\phi_\sigma^{cm} }
+\end{eqnarray}
+The center-of-mass energy (cm) energy and the momentum transfer are represented by the commonly used variables $s$ and $t$. 
+%The invariant mass of the 2$\pi$ system ($\sigma$) is denoted by W$_{\pi\pi}$. 
+Other variables are subscripted by particle name and their superscripts indicate the reference frame. Thus $p_\gamma^{cm}$ is the incident photon momentum, $p_\sigma^{cm}$ is the scattered momentum,  and $\Omega_\sigma^{cm}$ corresponds to the solid angle of the $\sigma$, all in the cm frame.  
+The momentum of the pions in the $\sigma$ rest frame is denoted by $p_\pi^{\sigma}$ and $\Omega_\pi^{\sigma}$ denotes the solid angle of  one of them.
+Thus the cross section can be written as
+\begin{eqnarray}
+{d\sigma \over dt dm_{\pi\pi} d\phi_{\sigma}^{cm} d\Omega_\pi^{\sigma} } & = & {1 \over 2(4\pi)^5} {p_\pi^\sigma \over (p_\gamma^{cm})^2 s } |\sum_i \mathcal{A}^i|^2 ,     \label{eq:sigma_phi3}
+\end{eqnarray}
+where the index $i$ runs over the number of resonances or mechanisms included in the calculation. We  will assume that we can parameterize each production amplitude as a factorized product
+\begin{eqnarray}
+\mathcal{A}^i & = & \mathcal{A}_t(t)^i \, \mathcal{A}_W(m_{\pi\pi})^i \, \mathcal{A}_\tau(\Phi, \phi, \theta)^i.
+\end{eqnarray}
+For simplicity, we will drop the superscript $i$ since for the moment we are considering  single production mechanism.
+The function $\mathcal{A}_\tau(\phi_{\pi\pi}, \phi_\pi, \theta_\pi)$ contains the angular dependence of the produced pions, 
+where\,($\theta_\pi,\phi_\pi$)  are the decay angles in the rest frame of the $2\pi$ system, which is flat for S-wave production. 
+Azimuthal symmetry is broken by the photon polarization, where $\phi_{\pi\pi}$\,is the angle between the plane of photon polarization and the production plane. The amplitudes are
+given by Eq.\,\ref{eq:PhiAmplitude} and lead to a cross section dependence of the form $\mathcal{A}_\tau \propto (1 + \mathcal{P} \cos{2\phi_{\pi\pi}}$). 
+
+The primary background in this mass region is given by the 
+f$_0(500)(J^{PC}=0^{++})$  also called the $\sigma$. The $\sigma$ has the same angular structure as the Primakoff 
+reaction and can only be identified through its dependence on $t$ and $m_{\pi\pi}$.
+Our parameterization of the mass dependence for the $\sigma$ meson is described in Section\,\ref{sec:ParmSwave}.
+
+We assume the $-t$ dependence of the $\sigma$ has a similar form as for single $\pi^0$ production, namely $\mathcal{A}_t(t) \propto \sin{\theta_{\pi\pi}} \times F_{st}(t)$.  The $\sin{\theta_{\pi\pi}}$ 
+comes from the spin-flip required at forward angles to produce a $0^+$ system from a spin-zero target. The factor $F_{st}(t)$ is the strong form factor for the target, which is approximated to
+match calculations for the single $\pi^0$ production (Fig.\,6 from Ref.\cite{Gevorkyan:2009ge}). 
+
+
+
+ 
+\subsection{Parameterization of the s-wave amplitude \label{sec:ParmSwave}}
+There is considerable strength in the $2\pi$ channel coming from s-wave production, which is due to the now established $f_0(500)$ meson. It is also commonly referred to as the $\sigma$ 
+meson. We assume the amplitude for $\sigma$ production  
+is governed by the $\pi\pi$ J=0, I=0 phase shifts. We parameterize the $m_{\pi\pi}$ dependence as 
+\begin{eqnarray}       
+\mathcal{A}_W(m_{\pi\pi}) & \sim & \frac{m_{\pi\pi}}{2k} \sin{\delta_0} e^{i\delta_0} \left(\alpha_1 + \alpha_2 m_{\pi\pi}^2 \right) + 
+ \cos{\delta_0} e^{i\delta_0} \left(\alpha_3 + \alpha_4 m_{\pi\pi}^2 \right),                    \label{eq:Aw}
+\end{eqnarray}
+where $\delta_0$ is the s-wave phase shift for $I=0$ and $\alpha_i$ (i=1, 2, 3, 4) are empirical constants to be obtained from data.
+The first term is due to ``compact source'' production of the pion pair 
+(see Eq.\,5 from Ref.\,\cite{Pelaez:2015qba}) and the second term is due to 
+production due to an ``extended source,'' for example pion rescattering (see Eq.\,5 from Ref.\,\cite{Bibrzycki:2018pgu} and Eq.\,9 from Ref.\,\cite{Aitchison:1977sm}).  
+We use the parameterization for the s-wave phase shifts 
+from Appendix D of Ref.\,\cite{Ananthanarayan:2000ht}:\footnote{See also Eq.\,44 of Ref.\,\cite{Pelaez:2015qba}.}  
+\begin{eqnarray}  
+\tan{\delta_0} & = &  \frac{2k}{m_{\pi\pi}} \left(A_{0}^0 + B_{0}^0 k^2 + C_{0}^0 k^4 + D_{0}^0 k^6 \right) \left(4m_\pi^2 - s_{0}^0 \over M_{\pi\pi}^2 - s_{0}^0 \right), 
+\end{eqnarray}
+where we use the same notation as the reference with $A_{0}^0$ =0.225, $B_{0}^0$ =12.651\,GeV$^{-2}$, $C_{0}^0$= -43.8454\,GeV$^{-4}$,   $D_{0}^0$=-87.1632\,GeV$^{-6}$, and $s_0^0$=0.715311\,GeV$^2$.
+We have converted the constants to units of GeV and evaluated the parameters for $a_0^0=0.225\,m_\pi^{-1}$, and $a_0^2=-0.0371\,m_\pi^{-1}$. These fits are only valid below $m_{\pi\pi}<$ 0.9 GeV because
+they do not properly include the $f_0(980)$. 
+
+The empirical constants in Eq.\,\ref{eq:Aw} were determined by fitting $|\mathcal{A}_W|^2$ to the S-wave contribution to the photoproduction 
+cross section\footnote{The data are available through the Durham HEP Databases, http://durpdg.dur.ac.uk/.}  
+measured by CLAS for $E_\gamma=3-3.8$ GeV \cite{Battaglieri:2009aa} for $-t=0.4-0.5$ GeV$^2$. The fits are for $m_{\pi\pi}=0.3-0.95$ GeV, which is our region of interest.
+All four parameters are needed to obtain a good representation to the central values of the data, although the uncertainty band in the data allow for a wide range of parameters. 
+Assuming that the constants are real and relatively independent of energy and $-t$,
+we take the average of the fitted constants for our parameterization ($\alpha_1=8.4\pm1.4$,  $\alpha_2=-4.1\pm2.2$,  $\alpha_3=2\pm1.1$,  $\alpha_4=8\pm1.1$).
+
+\section{Angular distribution in the helicity basis}
+
+\subsection{Photon density matrix in the helicity basis}
+The linear polarization of the photon can be expressed as (Ref.\cite{Schilling:1969um}  Eq. 18-19):
+\begin{eqnarray}
+\rho(\gamma) & = & \textstyle{1 \over 2} I + \textstyle{1 \over 2} \vec{P_{\gamma}} \cdot \vec{\sigma}, \, \rm{where} \label{eq:photon_sdmH} \\
+\vec{P_\gamma} & = & \mathcal{P} (-\cos 2\phi_{\pi\pi}, -\sin 2\phi_{\pi\pi}, 0)
+\end{eqnarray}
+and $\vec{\sigma}$ are the Pauli matrices. The angle $\phi_{\pi\pi}$ is the angle between the polarization vector of the photon and the production plane and $\mathcal{P}$
+represents the degree of linear polarization. Multiplying out these factors gives the expression for the 
+photon density matrix in the helicity frame as (Ref.\cite{Salgado:2013dja}  Eq. 219):
+\begin{eqnarray}
+\rho_{\epsilon,\epsilon'} (\gamma) & = & \textstyle{\frac{1}{2}} \left( \begin{array}{cc} 1 & -\mathcal{P}e^{-2i\phi_{\pi\pi}} \\
+-\mathcal{P}e^{2i\phi_{\pi\pi}} & 1 \end{array} \right)    \label{eq:dm_photon}
+\end{eqnarray}
+
+\subsection{Parity constraints  \label{sec:parity}}
+We consider the reaction $a + b \rightarrow c + d$, where the spin of each particle is denoted by $s_j$, their helicity by $\lambda_j$ and their intrinsic parity by $\eta_j$. 
+If parity is conserved, there are relations between amplitudes with opposite helicities, which are  given in Jacob and Wick \cite{Jacob:1959at} Eq. 43 and  Ref.\cite{Schilling:1969um}  Eq. 20 \footnote{We thank Adam
+Szczepaniak for clarifying the connection between these papers.} (see also Ref. \cite{leader} Eq. 4.2.3):
+\begin{eqnarray}
+^{\lambda_a}V_{\lambda_c}^{\lambda_{d}\lambda_{b}}  & = & \left( \eta_c \eta_d \over \eta_a \eta_b \right) (-1)^{s_c+s_d-s_a-s_b} (-1)^{(\lambda_c-\lambda_d)-(\lambda_a-\lambda_b)}  \hspace{0.25cm} ^{-\lambda_a}V_{-\lambda_c}^{-\lambda_{d}-\lambda_{b}}   \label{eq:parity}
+\end{eqnarray}
+
+\subsection{S-wave production}
+For the case of S-wave production of two pions via the $f_0(500)$ or $\sigma$ meson off an spinless target we have the following constraint:
+\begin{eqnarray}
+^{\lambda_\gamma}V_{\lambda_\sigma}^{\lambda_{Z}\lambda_{Z}} & = & ^{\epsilon}V_{0}^{00} = \left( \eta_c+ \over -+ \right) (-1)^1 (-1)^{-1} \,\,^{-\epsilon} V_0^{00} = - \eta_c\,^{-\epsilon}V_0^{00}
+\end{eqnarray}
+For convenience, we have separated out the parity of the scattered state $\eta_c$. 
+The $2\pi$ intensity distribution (see Ref.\cite{Salgado:2013dja} Eq. 220-223 and also Eqs. 264) is given by the following expression after 
+dropping the superscripts  related to the target helicities and collapsing 
+the sums over external and internal spins  because both the target and resonance are $0^+$ objects:
+\begin{eqnarray}
+\mathcal{I} & = & \sum\limits_{\epsilon \epsilon'} \, ^\epsilon V_0 \, Y_0^0 \, \rho_{\epsilon \epsilon'} \, ^{\epsilon'}V_0^* \, Y_0^{0*}   \label{eq:swave_intensity}\\
+ & = & \textstyle{\frac{1}{2}}  |Y_0^0|^2     \left( ^1V_0 \hspace{0.3cm} ^{-1}V_0 \right) \, \left( \begin{array}{cc} 1 & -\mathcal{P}e^{-2i\phi_{\pi\pi}} \\
+-\mathcal{P}e^{2i\phi_{\pi\pi}} & 1 \end{array} \right)  \left( \begin{array}{c} ^1V_0^* \\ ^{-1}V_0^* \end{array} \right) \\
+& = &  \textstyle{\frac{1}{2}}  |Y_0^0|^2  \left[ |^1V_0|^2 - \mathcal{P} \,^{1}V_0 \,^{-1}V_0^* \, e^{-2i\phi_{\pi\pi}} - \mathcal{P} \,^{1}V_0^* \,^{-1}V_0\, e^{2i\phi_{\pi\pi}}  +  |^{-1}V_0|^2  \right]
+\end{eqnarray}
+Noting that $^{1}V_0 = -\eta_c\,^{-1}V_0$, we obtain the following expression:
+\begin{eqnarray}
+\mathcal{I} & = &  \textstyle{\frac{1}{4\pi}}   |^1V_0|^2 \left(1 + \eta_c \mathcal{P} \cos{2\phi_{\pi\pi}} \right),
+\end{eqnarray} 
+where $\phi_{\pi\pi}$ is the angle of the polarization vector relative to the production plane. For the case of $\sigma$ production, $\eta_c = +1$, but for the case of $\pi^0$ production we have
+the opposite sign, $\eta_c = -1$.
+%\footnote{This analysis gives the correct sign for $\pi^0$ production, but does not include the $\Sigma$ asymmetry as a factor; not sure why. The formulas for Primakoff production do not include such a factor.}    
+For the Primakoff production of $\pi^+\pi^-$ in S-wave, $\eta_c = (-1)(-1)(-1)^0 = +1$. See Ref. \cite{CPPexp} Eq. 8. 
+
+The intensity distribution in Eq.\,\ref{eq:swave_intensity} may be written in a more convenient form for use with AmpTools, namely
+\begin{eqnarray}
+\mathcal{I} & = & (\textstyle{1-\mathcal{P} \over 4}) |A_{+}|^2 +  (\textstyle{1+\mathcal{P} \over 4}) |A_{-}|^2 \\
+A_{\pm} & = & Y^0_0 (^{1}V_0 \pm \,^{-1}V_0 \, e^{2i\phi_{\pi\pi}} )\\
+A_{\pm} & = & Y^0_0 \, ^{1}V_0\,(1 \mp \eta_c\, e^{2i\phi_{\pi\pi}}),
+\end{eqnarray}
+which can be written more symmetrically taking advantage of an arbitrary phase as
+\begin{eqnarray}
+A_{\pm} & = & Y^0_0 \, ^{1}V_0\,(e^{-i\phi_{\pi\pi}}  \mp \eta_c\, e^{i\phi_{\pi\pi}}).  \label{eq:PhiAmplitude}
+\end{eqnarray}

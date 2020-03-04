@@ -13,6 +13,13 @@
 \def\violet{\color{\frac{\lambda^a}{2}iolet}}
 \def\orange{\color{orange}}
 
+
+ % The package hyperref provides LaTeX the ability to create hyperlinks within the document. Comment out the next line to load document onto the arXiv.
+\usepackage{hyperref}
+\usepackage{xcolor}
+% The package lineno adds line numbers to LaTeX documents.
+\usepackage{lineno}
+
 \usepackage[margin=0.65in]{geometry}
 
 % Uncomment the following two lines to have line numbers printed in the document
@@ -60,8 +67,9 @@
 This proposal presents our plan to make a precision measurement of the cross section for $\gamma \gamma \rightarrow \pi^0 \pi^0$ via the Primakoff effect using the GlueX detector in Hall D. The aim is to significantly improve the data in the low $\pi^0\pi^0$ invariant mass domain, which is essential for understanding the low energy regime of Compton scattering on the $\pi^0$. In particular, the aim is to obtain a first accurate experimental determination of the neutral pion polarizability $\alpha_\pi - \beta_\pi$, which is one of the important predictions of chiral perturbation theory and a key test of chiral dynamics on the $\pi^0$.  Our goal is to measure $\sigma(\gamma\gamma\rightarrow\pi^0\pi^0)$ to a precision of $\sim$1\%, which would determine the combination of $\alpha_{\pi^0}-\beta_{\pi^0}$ to a precision of 10\%. We expect this experiment to run concurrently with the previously approved experiment to measure the charged pion polarizability (CPP) \cite{CPPexp} in Hall D.
 \end{abstract}
 
-\parindent 15pt
-\parskip 8 pt
+\newpage
+
+\tableofcontents 
 
 %---------------------------------------------------------------------------------------------------------------
 %--------------------------------- Introduction ------------------------------------------------------------------
@@ -85,6 +93,7 @@ This proposal presents our plan to make a precision measurement of the cross sec
 \input{JLAB_Overview.tex}
 \input{JLAB_Acceptance.tex}
 \input{JLAB_Backgrounds.tex}
+\input{DataAnalysis.tex}
 \input{JLAB_Pi0Normalization.tex}
 \input{JLAB_Sensitivity.tex}
 %\input{JLAB_MuonDetector.tex}
@@ -99,6 +108,11 @@ This proposal presents our plan to make a precision measurement of the cross sec
 %\nocite{*}
 \bibliographystyle{unsrt}                                                                              
 \bibliography{Pi0Polarizability}   
+
+\newpage
+\appendix
+
+\input{Appendix_NCSwave}
 
 
 \end{document}
