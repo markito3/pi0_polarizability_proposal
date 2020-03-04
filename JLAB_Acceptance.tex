@@ -43,10 +43,10 @@ Fig.\ref{fig:sigma_2pi0_figs_2}.
 \begin{figure}[tph]
 \centering
 \includegraphics[page=2,width=4.75in]{figures/sigma_2pi0_figs.pdf}
-\caption{Primakoff cross section for $\gamma Pb \rightarrow Pb\, \pi^0 \pi^0$ using the parameterization of  $\sigma(\gamma\gamma\rightarrow \pi^0\pi^0)$ in the previous figure. The integrated cross section is 0.35\,$\mu$b/nucleus.
+\caption{Primakoff cross section for $\gamma Pb \rightarrow Pb\, \pi^0 \pi^0$ using the parameterization of  $\sigma(\gamma\gamma\rightarrow \pi^0\pi^0)$ in the previous figure. The integrated cross section is 0.3\,$\mu$b/nucleus.
 \label{fig:sigma_2pi0_figs_2}}
 \end{figure}
-The integrated cross section is 0.35\,$\mu$b/nucleus. For reference,
+The integrated cross section is 0.30\,$\pm0.05\mu$b/nucleus. The estimated uncertainty comes from comparing two different calculations using completely different parameterizations for the nuclear form factor on lead, $F(Q^2)$. For reference,
 we note that the cross section for charged pions $(\pi^+\pi^-$)
 production is 10.9\,$\mu$b, a factor of 30 larger.
 
@@ -65,8 +65,7 @@ section.
 \label{sec:acceptance}
 The response of the GlueX detector to neutral pion Primakoff events
 was simulated using the standard GlueX generation and reconstruction
-tools, but with the specific geometry for the CPP experiment. The
-schematic of the detector configuration is shown in
+tools, but with the specific geometry for the CPP experiment. The schematic of the detector configuration is shown in
 Fig.\,\ref{fig:GlueX_cpp}. The primary differences between the
 standard GlueX geometry and CPP are summarized in
 Table\,\ref{tab:ccp_config}. For this experiment, the main differences
@@ -75,7 +74,7 @@ the microscope to cover the coherent peak, b) solid $^{208}$Pb at
 z=1cm, and c) Start counter removed. For the CPP experiment, the
 addition of muon identification chambers behind the FCAL is
 critical. However, for neutral pions this addition plays no role
-because the photons are detected in the FCAL. The GEANT3 simulation,
+because the photons are detected in the FCAL. The GEANT3 simulation,\footnote{The event simulation has been updated to run with GEANT4 and yields similar results.}
 which is used for these studies, includes most changes except for the
 addition of the muon chambers, which are not needed. In addition, the
 microscope geometry has not been modified and we use the tagger
@@ -91,9 +90,8 @@ flux.
 \end{figure}
 
 The Primakoff signal was generated according to the cross section
-described in the previous chapter, using a modified version of the
-\emph{gen\_2pi\_primakoff} event generator to generate $\pi^0$'s
-instead of charged pions. By default, the production amplitudes are
+described in the previous chapter, using the
+\emph{gen\_2pi0\_primakoff}, which is a modified version of the CPP event generator. By default, the production amplitudes are
 symmetrized between the two identical $\pi^0$'s by AmpTools. One
 hundred thousand events were generated with $M_{\pi\pi}<$0.5 GeV and
 with no background, fed to GEANT3 to track particles, and subsequently
@@ -101,7 +99,7 @@ processed using \emph{mcsmear} to simulate the detector response. The
 simulated events were then analyzed using the GlueX event filter to
 analyze the reaction $\gamma Pb \rightarrow \pi^0 \pi^0$ with a
 missing Pb nucleus and constraining the detected photon pairs to the
-$\pi^0$ mass.  The output of the reconstruction, both kinematically
+$\pi^0$ mass. Energy and momentum conservation is imposed on the reaction as well as the requirement that all photons originate from a common vertex (i.e. ``vertex-P4''). The output of the reconstruction, both kinematically
 fit and ``measured" quantities, were available for inspection.
 
 In the following we show various reconstructed quantities as well as
