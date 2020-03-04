@@ -1,0 +1,609 @@
+\documentclass[12pt,epsfig]{article}
+%\documentclass[aps,prd,preprint,showpacs,floatfix,preprintnumbers,nofootinbib,superscriptaddress,showkeys]{revtex4}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage{float}
+\usepackage{color}
+\usepackage{fancybox}
+\usepackage{hhline}
+\usepackage{dcolumn}
+\usepackage{textcomp}
+\usepackage{epsfig,graphics,graphicx}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{pifont}
+\usepackage{bm}
+\usepackage{longtable} 
+\usepackage{appendix}
+\usepackage{lscape}
+\usepackage[mathscr]{euscript}
+\usepackage{mathrsfs}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{color} 
+\usepackage{placeins}
+\usepackage[usenames]{color}
+\usepackage{epsfig}
+\usepackage{amsfonts}
+\usepackage{amssymb,amsmath}
+\usepackage{latexsym}
+\usepackage[dvipsnames]{xcolor}
+\def\red{\color{red}}
+\def\blue{\color{blue}}
+\def\green{\color{green}}
+\def\violet{\color{violet}}
+\def\orange{\color{orange}}
+%\newcommand\appendix{\par \setcounter{chapter}{0}% \setcounter{section}{0}% \gdef\@chapapp{\appendixname}%\gdef\thechapter{\@Alph\c@chapter}}
+\newcommand{\fr}{\frac}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\zero}{{(0)}}
+\newcommand{\one}{{(1)}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\ord}[1]{{\cal{O}}( #1 )}
+\newcommand{\B}{{\bf B}}
+\newcommand{\Bdag}{{\bf B^\dagger}}
+%\usepackage{youngtab2}
+\newcommand{\cgsu}[3]{ \langle #1 #2 \mid #3\rangle}
+\newcommand{\water}[2]{ #1,$^2$,#2}
+\setlength{\textwidth}{6.49truein}
+\setlength{\oddsidemargin}{-0.0in}
+\setlength{\evensidemargin}{-0.0in} 
+\setlength{\topmargin}{-0.35in}
+\setlength{\textheight}{8.4in}%
+\usepackage{epsfig}
+\begin{document}
+%\pagestyle{empty}
+\def \ba{\begin{eqnarray}}\def\ea{\end{eqnarray}}
+\def\bc{\begin{center}}\def\ec{\end{center}}
+\def\nn{\nonumber\\}\def\v{\vec}
+
+\title{\Huge \bf $\gamma\gamma \to \pi^0\pi^0}
+\author{Jose}
+\date{\today}
+\maketitle
+\pagestyle{plain}
+
+  \section{The amplitude $\gamma^{(*)}\gamma^{(*)} \to \pi^0\pi^0$}
+   \begin{center}
+{\includegraphics[scale=0.75]{FIG-1.pdf}
+\end{center}
+ 
+  
+  The relevant tensor is:
+  \beq
+  V_{\mu\nu}\equiv=\langle p_1,p_2\mid T (J_\mu (x) J_\nu (y))\mid 0\rangle
+  \eeq
+  where $J_\mu$ is the EM current.
+  Fourier transforming in $x$ and $y$ with momenta $k_1$ and $k_2$ respectively, we can write the most general form for $V_{\mu\nu}$ which respects all symmetries:
+  \beq
+  V_{\mu\nu}=\sum _{i=1}^5 A_i(s,t,u) T^i_{\mu\nu}  \eeq
+  where $s,~t,~u$ are  Mandelstam invariants and the tensor basis which respects gauge invariance is:
+  \bea
+  T_{\mu\nu}^1&=&   k_{1\;\nu} \;  k_{2\;\mu}-g_{\mu\nu} k_1 \cdot k_2     \nonumber\\
+  T_{\mu\nu}^2&=&   k_{1\;\mu}\;   k_{1\;\nu}-g_{\mu\nu} k_1^2+\frac{1}{k_2\cdot P}(      k_{2\;\mu}\; k_1^2- k_{1\;\mu}\; k_1\cdot k_2)    \nonumber\\
+  T_{\mu\nu}^3&=&    k_{2\;\mu} \;  k_{2\;\nu}-g_{\mu\nu} k_2^2+\frac{1}{k_1\cdot P}(      k_{1\;\nu}\; k_2^2- k_{2\;\nu} \;k_1\cdot k_2)           \nonumber\\
+  T_{\mu\nu}^4&=& P_\mu P_\nu-\frac{1}{k_1\cdot k_2}(       k_{2\;\mu} \;P_\nu k_1\cdot P+ k_{1\;\nu} \;P_\mu k_2\cdot P-g_{\mu\nu} k_1\cdot P k_2\cdot P)    \nonumber\\
+  T_{\mu\nu}^5&=&  k_{1\;\mu} k_{2\;\nu}-         \frac{1}{k_1\cdot k_2}(k_1^2 k_{2\;\mu} \;  k_{2\;\nu}+k_2^2   k_{1\;\mu} \;  k_{1\;\nu}-g_{\mu\nu} k_1^2 k_2^2)
+  \eea
+  with $P=p_1-p_2$, we have:
+  \bea
+  k_1\cdot k_2&=&\frac{s}{2}-k_1^2-k_2^2\nonumber\\
+  k_1\cdot P&=&\frac{1}{2}(u-t+p_1^2-p_2^2)\nonumber\\
+   k_2\cdot P&=&-\frac{1}{2}(u-t+p_2^2-p_1^2)
+  \eea
+  In the case $p_1^2=p_2^2$, $k_1\cdot P=-k_2\cdot P=\frac 12 (u-t)$.
+  
+  Bose symmetry requires that:
+  \bea
+  T_{\mu\nu}(P,k_1,k_2)&=&T_{\mu\nu}(-P,k_1,k_2)\nonumber\\
+  &=& T_{\nu\mu}(P,k_2,k_1)
+  \eea
+  which corresponds also to the exchange $u\leftrightarrow t$.  This then implies that:
+  \bea
+  A_2(s,t,u)&=&A_3(s,u,t)\nonumber\\
+  A_i(s,t,u)&=&A_i(s,u,t)~~~i=1,4,5
+  \eea
+  \section{$\pi^0\pi^0$ photoproduction }
+  
+  \subsection{Kinematics in Lab frame}
+     \begin{center}
+{\includegraphics[scale=0.75]{FIG-2.pdf}
+\end{center}
+ 
+  Definitions:
+  
+  \bea
+  \omega=|\vec k|\nonumber\\
+  \vec p_\pm&=& \vec p_1\pm \vec p_2,~~~~{\sf{p}}_\pm=|\vec p_\pm|\nonumber\\
+  \vec p_f&=& \vec k-\vec p_+,~~~E_f=\sqrt{\vec p_f^2+M^2}
+  \eea
+  Spherical coordinates: choose $\vec k$ in $z$ direction.
+  \bea
+  \vec p_\pm &=& \sf{p}_\pm (\sin \theta_\pm \cos \phi_\pm,\sin \theta_\pm \sin \phi_\pm, \cos\theta_\pm)\nonumber\\
+  E_1^2&=&\frac 14 ( \sf{p}_+^2+\sf{p}_-^2+2 \sf{p}_+\;\sf{p}_-\; \cos \alpha)+M_\pi^2\nonumber\\
+   E_2^2&=&\frac 14 (  \sf{p}_+^2+\sf{p}_-^2-2 \sf{p}_+\;\sf{p}_-\; \cos \alpha)+M_\pi^2\nonumber\\
+   \cos\alpha&=&\cos \theta_+\;\cos\theta_-+\cos(\phi_+-\phi_-)\sin \theta_+\;\sin\theta_-\nonumber\\
+   \vec p_f^{~2}&=& \sf{p}_+^2+\omega^2-2 \sf{p}_+\; \omega \cos \theta_+\nonumber\\
+   E_f^2&=&    \vec p_f^{~2}+M^2
+  \eea
+  so that $E_1+E_2=\omega+M-E_f$ depends only on $\sf{p}_+$ and $\theta_+$.
+  From the above we get:
+  \beq
+  E_1-E_2=\frac{ \sf{p}_+ \sf{p}_- \cos\alpha}{\omega+M-E_f}=\frac{ \sf{p}_+ \sf{p}_- \cos\alpha}{E_1+E_2}
+  \eeq
+  \subsection{Differential cross section}
+  \bea
+  d\sigma&=& \frac{1}{2(4\pi)^5}\; \frac{ \mid {\cal{M}}\mid^2  }{\omega M E_1 E_2 E_f} \delta(\omega +M-E_1-E_2-E_f)\;d^3 p_+ d^3 p_-\nonumber\\
+&=&  \frac{1}{2(4\pi)^5}\frac{ \mid {\cal{M}}\mid^2  }{\omega M E_1 E_2 E_f} \delta(\omega +M-E_1-E_2-E_f)\;     { \sf{ p}}_+ ^2 { \sf{ p}}_-^2 d\cos\theta_+ d\cos\theta_- d\phi_+ d\phi_- d{\sf{p}}_+ d{\sf{p}}_-\nonumber
+  \eea
+using that ${ \sf{ p}}_+\;  {\sf{ p}}_-\; \cos\alpha= \vec{{ p}}_+\cdot  \vec{{ p}}_-=E_1^2-E_2^2$, we obtain:
+\beq
+ \delta(\omega+M-E_1-E_2-E_f) =4\frac{E_1 E_2 {\sf{p}_-}}{(E_1+E_2)\mid {\sf{p}}_-^2- (E_1-E_2)^2\mid} \delta({\sf{p}}_--{\sf{\bar p}}_-)
+\eeq  
+  where
+  \bea
+{ \sf{\bar p}}_-&=&\frac{(E_1+E_2) \sqrt{(E_1+E_2)^2-{\sf{p}_+}^2-4M_\pi^2)}}{  \sqrt{(E_1+E_2)^2-\sf{p}_+^2\cos^2\alpha}}\nonumber\\
+&=& \frac{\sqrt{{\sf{p}_+}^2 +W_{\pi\pi}} \sqrt{W_{\pi\pi}-4 M_\pi^2}}{\sqrt{W_{\pi\pi}+{\sf{p}_+}^2 \sin^2 \alpha}}  \eea
+  Here we defined the squared $\pi\pi$ invariant mass:
+  \bea
+  W_{\pi\pi}&=&(E_1+E_2)^2-{ \sf{ p}}_+ ^2=2(\omega^2+M^2+\omega M)-2\omega { \sf{ p}}_+\; \cos\theta_+-2(\omega+M)E_f\nonumber\\
+ &=&\left(-\sqrt{M^2+{ \sf{ p}}_+^2-2 { \sf{ p}}_+ \omega  \cos \theta _++\omega ^2}+M+\omega \right)^2-{ \sf{ p}}_+^2  \eea
+  The diff cross section then becomes:
+  \bea
+  d\sigma &=&\frac{2}{(4\pi)^5}\;\frac{ \mid {\cal{M}}\mid^2  }{\omega M   E_f (E_1+E_2) \mid { \sf{\bar  p}}_-^2-(E_1-E_2)^2\mid} \; { \sf{ p}}_+ ^2 { \sf{\bar  p}}_-^3 \;d\cos\theta_+ d\cos\theta_- d\phi_+ d\phi_- d{\sf{p}}_+\nonumber\\
+  &=&\frac{2}{(4\pi)^5}\;\frac{ \mid {\cal{M}}\mid^2  }{\omega M   E_f  \mid (E_1+E_2)- \frac{\sf{ p}_+^2\cos^2\alpha}{E_1+E_2}\mid} \; { \sf{ p}}_+ ^2 { \sf{\bar  p}}_- \;d\cos\theta_+ d\cos\theta_- d\phi_+ d\phi_- d{\sf{p}}_+
+  \eea
+  where we can use:
+  \bea
+  E_1+E_2&=& \omega+M-E_f\nonumber\\
+  (E_1-E_2)^2&=&(E_1+E_2)^2-4 E_1 E_2\nonumber\\
+  E_1 E_2&=&\sqrt{M_\pi^4+\frac 12 M_\pi^2({ \sf{ p}}_+ ^2+{ \sf{ p}}_- ^2)+\frac 14 ({ \sf{ p}}_+ ^4 +{ \sf{ p}}_- ^4-{ \sf{ p}}_+ ^2{ \sf{ p}}_- ^2 \cos(2\alpha))}
+  \eea
+  It is convenient to express the cross section in terms of the invariant mass squared of the two pion system, where $W_{\pi\pi}>4 M_\pi^2$ and 
+  \beq
+  d{ \sf{ p}}_+ =\frac{E_f}{2({ \sf{ p}}_+ (\omega+M)-\omega (E_1+E_2)\cos\theta_+)}dW_{\pi\pi}
+  \eeq
+  
+  One can then write Eq(10) as:
+   \beq
+{ \sf{\bar p}}_-=\frac{(E_1+E_2) \sqrt{W_{\pi\pi}-4M_\pi^2}}{  \sqrt{W_{\pi\pi}+\sf{p}_+^2\sin^2\alpha}}
+  \eeq
+  
+  
+  
+   With some work one can replace everywhere ${ \sf{ p}}_+ $ in terms of $W_{\pi\pi}$ using Eq. (12). For this, at a given $\omega$ and $\theta_+$,  one needs that:
+   \beq
+   W_{\pi\pi}^2- 4 W_{\pi\pi}  (M(M+\omega)+\omega^2 \sin^2\theta_+)
+   +4 M^2 \omega^2>0
+   \eeq
+ and one gets:
+ {\footnotesize
+ \beq
+{ \sf{ p}}_+  =\frac{\omega  \cos
+   \theta_+ (2 M \omega +W_{\pi\pi})\pm (M+\omega ) \sqrt{ -4 M^2 \left(W_{\pi\pi}-\omega ^2\right)-4 M W_{\pi\pi} \omega +2 W_{\pi\pi} \omega ^2 \cos 2 \theta_++W_{\pi\pi} \left(W_{\pi\pi}-2 \omega ^2\right)}}{2 (M+\omega )^2-2 \omega ^2 \cos ^2\theta_+}
+ \eeq}
+  
+  The next step is to determine the physical  domain of integration in the angles and $W_{\pi\pi}$. This is being worked out still.
+  
+  Also, one should find which angular variables are the most convenient to use. This requires that we know in detail the scattering amplitude's angular dependencies in order to make the choice.
+  
+ \subsection{Forward limit}
+ We will be interested in the limit of large ${ \sf{ p}}_+$, small $\theta_+$ and small to moderate $W_{\pi\pi}$, which implies also small $\alpha$.. This also implies that We also want the limit of large $\omega$.
+  In that limit we have:
+  \bea
+    { \sf{\bar p}}_-&=&\frac{(E_1+E_2) \sqrt{W_{\pi\pi}-4M_\pi^2}}{  \sqrt{W_{\pi\pi}+{ \sf{\bar p}}_+^2 \sin^2\alpha}}\nonumber\\
+{ \sf{\bar p}}_+&=&\frac{\omega(W_{\pi\pi}+2 M \omega)+(M+\omega)\sqrt{W_{\pi\pi}(W_{\pi\pi}-4 M \omega)+4 M^2(\omega^2-W_{\pi\pi})}}{2 M(M+2\omega)}\nonumber\\
+&=&\omega- \frac{W_{\pi\pi}}{2 \omega
+   } -\frac{W_{\pi\pi}^2}{8 M \omega^2}-\frac{W_{\pi\pi}^2 \left(2 M^2+W_{\pi\pi}\right)}{16 M^2 \omega ^3}+\cdots\nonumber\\
+d{ \sf{\bar p}}_+&=&\left(\frac{1}{2
+   \omega } +\frac{W_{\pi\pi}}{4 M \omega ^2}+ \frac{W_{\pi\pi} \left(\frac{3 W_{\pi\pi}}{M^2}+4\right)}{16 \omega ^3}\right) dW_{\pi\pi}\nonumber\\
+E_f&=& \frac{W_{\pi\pi}^3}{16 M^2 \omega ^3}+\frac{W_{\pi\pi}^2}{8 M \omega ^2}+M\nonumber\\
+E_1+E_2&=& \omega- \frac{W_{\pi\pi}^2}{8 M \omega ^2}-\frac{W_{\pi\pi}^3  }{16 M^2 \omega ^3}~~~~~~~~~~~~~~~~~~~
+  \eea
+  
+  
+  \section{Primakoff amplitude and cross section}
+  
+\begin{center}
+{\includegraphics[scale=0.75]{FIG-3.pdf}
+\end{center}
+ 
+  The scattering amplitude is given by the general expression:
+  
+  \beq
+  {\cal{M}}=\epsilon^\mu T_{\mu\nu}(k,q,p_-) \frac{1}{Q^2} J^\nu
+  \eeq
+$T_{\mu\nu}$ is the Compton tensor,   $Q^2=-q^2$, and the target's EM current  in the Lab frame we will neglect the spin of the target, and therefore we only care about the its charge:
+\beq
+J^\mu=g^{\mu 0} Z e F(Q^2); \text{ note that we still need to use  }  q_\nu J^\nu=0
+\eeq
+  where $ F(Q^2)$ is the charge FF of the target.
+  
+Since we are interested in the region of the Primakoff  peak, first we approximate the amplitude by using the Compton tensor in the limit of real Compton scattering. This is then directly obtained from the result provided by Bellucci et al. which will be valid for the small $W_{\pi\pi}$ regime.  Later I will work out a more detailed analysis where the virtuality $Q^2$ is also included in the Compton tensor, and we will also need to give the amplitude for intermediate values of $W_{\pi\pi}$ (works of Oller and of Pennington).
+
+For a scalar particle the (virtual)  Compton tensor is written in terms of five transverse tensors (see Bakker and Ji, Few-Body Syst
+DOI 10.1007/s00601-016-1172-3)
+
+\bea
+T^{\mu\nu}&=&\sum_{n=1}^5 A_n(s,t,u) T_n^{\mu\nu}  \nonumber\\
+T_1^{\mu\nu}&=& k\cdot q\; g^{\mu\nu}-k^\nu q^\mu   \nonumber\\
+T_2^{\mu\nu}&=&(k^\mu k^\rho-k^2 \;g^{\mu\rho})(q_\rho q^\nu-q^2\;g_\rho^\nu)   \nonumber\\
+T_3^{\mu\nu}&=& (p_-^\mu k^\rho-p_-\!\cdot k \;g^{\mu\rho})(p_-^\nu q_\rho-p_-\!\cdot q \;g_\rho^\nu)  \nonumber\\
+T_4^{\mu\nu}&=& (p_-^\mu k^\rho-p_-\!\cdot k\; g^{\mu\rho})(q_\rho q^\nu-q^2\;g_\rho^\nu)+ (k^\mu k^\rho-k^2\; g^{\mu\rho})(p_-^\nu \,q_\rho-p_-\!\cdot q\; g_\rho^\nu)  \nonumber\\
+T_5^{\mu\nu}&=& (k^\mu k^\rho-k^2 \;g^{\mu\rho})p_{-\rho}\; p_-^\sigma(q_\sigma q^\nu-q^2\;g_\sigma^\nu)  
+\eea
+
+Here, using $k^2=0$:
+\bea
+s&=& p_+^2=W_{\pi\pi}\nonumber\\
+u-t&=&2 k \cdot p_-=2 \omega (E_1-E_2- { \sf{ p}}_- \cos \theta_-)\nonumber\\
+s+t+u&=&2 M_\pi^2+q^2
+\eea
+
+which allow us to write:
+\bea
+q\cdot p_-&=& -k\cdot p_-=\frac{1}{2} (t-u)\nonumber\\
+k\cdot q&=&\frac 12 (W_{\pi\pi}-q^2)\nonumber\\
+
+\eea
+In the limit $k^2=q^2=0$:
+\bea
+T_1^{\mu\nu}&=& k\cdot q\; g^{\mu\nu}-k^\nu q^\mu   \nonumber\\
+T_2^{\mu\nu}&=&k\cdot q \; k^\mu  q^\nu   \nonumber\\
+T_3^{\mu\nu}&=& (p_-^\mu k^\rho-p_-\!\cdot k \;g^{\mu\rho})(p_-^\nu q_\rho-p_-\!\cdot q \;g_\rho^\nu)  \nonumber\\
+T_4^{\mu\nu}&=& (p_-^\mu k\cdot q-p_-\!\cdot k\; q^{\mu })  q^\nu+ k^\mu   (p_-^\nu \,k\cdot q-p_-\!\cdot q\; k^\nu)  \nonumber\\
+T_5^{\mu\nu}&=&  k\cdot  p_- \; q\cdot  p_- \,k^\mu q^\nu 
+\eea
+where for real photons only $T_1$ and $T_3$ will contribute to the amplitude after contracting with photon polarizations. 
+The tensor we need in this limit, eliminating terms that are proportional to $k^\mu$ due to transversity with the incoming photon polarization:
+\bea
+T_{\mu\nu}&=&A(W_{\pi\pi},t,u) (\frac 12 W_{\pi\pi} g_{\mu\nu}-k_\nu q_\mu)\\
+&+&2 B(W_{\pi\pi},t,u)  ( (W_{\pi\pi}-q^2) p_{-\mu} p_{-\nu}-2(k\cdot p_-\; q_\mu p_{-\nu}+q\cdot p_{-} k_\nu p_{-\mu}-g_{\mu\nu} k \cdot p_-\; \;q\cdot p_-))\nonumber\\ 
+&+& C(W_{\pi\pi},t,u) ( W_{\pi\pi}\,p_-^\mu -2\, p_-\! \cdot k\; q^\mu) q^\nu
+\eea
+where $p_-=p_1-p_2$. For the case where one contracts the Compton tensor with a conserved current as it is the case hare, namely $T^{\mu\nu} J_\nu$ where $J_\nu$ is the target electric current. Since $q^\mu J_\mu=0$, the term $C(W_{\pi\pi},t,u)$ does not contribute.
+
+The low energy theorem for Compton scattering gives the following constraints:
+\bea
+\frac{\alpha}{2 M_\pi} (A+16 M_\pi^2 B)\arrowvert_{W_{\pi\pi}=0, t=M_\pi^2}&=& \alpha_{\pi}\nonumber\\
+-\frac{\alpha}{2 M_\pi} A\arrowvert_{W_{\pi\pi}=0, t=M_\pi^2}&=& \beta_{\pi}
+\eea
+where $ \alpha_{\pi}$ $ \beta_{\pi}$ are the electric and magnetic polarizabilities respectively.
+
+For the functions $A$ and  $B$ there are low energy results in ChPT (Bellucci et al) at two loops. The results are as follows:
+\bea
+A(s,t,u)&=& 4\frac{ G_\pi(s)}{s F_\pi^2}(s-M_\pi^2)+U_A+P_A\nonumber\\
+ B(s,t,u)&=& U_B+P_B
+\eea
+where the functions and polynomials $U$ and $P$ are given in Bellucci's et al., see Appendix A:
+\beq
+G_\pi(s)=-\frac{1}{(4\pi)^2}\left (1+2\frac{M_\pi^2}{s}\int_0^1 \frac{dx}{x} \log(1-\frac{s}{M_\pi^2} x(1-x))\right)
+\eeq
+Use the integral in terms of dilogarithm functions:
+\beq
+\int_{0}^1 \frac{dx}{x} \log(1-U x(1-x))=-\text{Li}_2\left(\frac{1}{2} \left(U-\sqrt{U-4} \sqrt{U}\right)\right)-\text{Li}_2\left(\frac{1}{2} \left(U+\sqrt{U-4} \sqrt{U}\right)\right)\eeq
+where in our case $U$ must be taken to have an imaginary part $+i\eps$.
+At low energy $W_{\pi\pi}< (0.4 {\rm GeV})^2$ the $t$ dependence of the amplitudes $A$ and  $B$ is very small and can be neglected. We however should later consider also the effects of $Q^2>0$ and check that claim. 
+
+\subsection{Amplitude squared in Lab frame}
+
+ \bea
+% \arrowvert {\cal{M}}\arrowvert^2&=&\frac{1}{Q^4} Z^2 e^2 F^2(Q^2)\; \arrowvert  A\, \omega\, \eps\cdot q - 2 B\;(E_1-E_2) ( (W_{\pi\pi}+Q^2+q\cdot p_- )\eps\cdot p_--2 k\cdot p_- \;\eps\cdot q)  \arrowvert^2\nonumber \\
+ \arrowvert {\cal{M}}\arrowvert^2&=&\frac{1}{Q^4} Z^2 e^2 F^2(Q^2)\; \arrowvert  A(s,t,u)\, \omega\, \eps\cdot   q \nonumber\\
+ &-& 2 B(s,t,u)(( (W_{\pi\pi}+Q^2) (E_1-E_2) +2\, \omega \, k\cdot p_- )  \eps\cdot  p_--2 (E_1-E_2) k\cdot p_- \; \eps\cdot   q)   \nonumber \\
+ %&+& C(s,t,u) (E_1+E_2-\omega)(2 k\cdot p_- \;  \eps \cdot   q-W_{\pi\pi}  \eps\cdot   p_-)\arrowvert^2\nonumber\\
+ &=&\frac{1}{Q^4} Z^2 e^2 F^2(Q^2)\; \arrowvert K_1\;  \eps \cdot   q+K_2\;   \eps \cdot   p_-\arrowvert^2
+\eea
+
+where
+\bea
+K_1&=&\omega A(s,t,u)+4 B(s,t,u) (E_1-E_2) k\cdot p_-\nonumber\\
+K_2&=& -2 B(s,t,u)((W_{\pi\pi}+Q^2)(E_1-E_2) +2\omega k\cdot p_-)
+\eea
+The relevant products we need to use are:
+\bea
+\eps \cdot q&=&-\vec \eps \cdot \vec p_+=-{\sf{p}_+}\sin\theta_+ \cos\phi_+\nonumber\\
+\eps\cdot p_-&=&-{\sf{p}_-}\sin\theta_- \cos\phi_-\nonumber\\
+q^2&=&-Q^2=W_{\pi\pi}-2\omega(E_1+E_2-{\sf{p}_+}\ \cos\theta_+)\nonumber\\
+k\cdot p_-&=& \omega(E_1-E_2-{\sf{p}_-}\cos\theta_-)\nonumber\\
+q\cdot p_-&=&-k\cdot p_-= -\omega(E_1-E_2-{\sf{p}_-}\cos\theta_-)\nonumber\\
+p_-^2&=&4 M_\pi^2-W_{\pi\pi}
+\eea
+
+In the case of unpolarized photon beam we get:
+\bea
+\arrowvert {\cal{M}}\arrowvert^2&=&\frac 12 \frac{1}{Q^4} Z^2 e^2 F^2(Q^2)\; (-|K_1|^2  p_-^2}+|K_2|^2 Q^2+2 Re(K_1 K_2^*)  \; p_-\!\cdot   k)
+\eea
+
+
+ \bea
+ \arrowvert {\cal{M}}\arrowvert^2&=&\frac{1}{Q^4} Z^2 e^2 F^2(Q^2)\; ( A\, \omega\,   q^\mu - 2 B\;(E_1-E_2) ( (s+Q^2+q\cdot p_- ) p_-^\mu -2 k\cdot p_- \; q^\mu) \nonumber\\
+ &\times& ( A^*\, \omega\,   q_\mu - 2 B^*\;(E_1-E_2) ( (s+Q^2+q\cdot p_- ) p_{-\mu} -2 k\cdot p_- \; q_\mu)\nonumber\\
+ &=&\frac{e^2 Z^2 F\left(Q^2\right)^2}{Q^4} \biggl  (Q^2 \omega ^2 \Big(-\mid A\mid^2-16 \mid B\mid^2 ({E_1}-{E_2})^2   \nonumber\\ &\times&\left.
+ (  ({E_1}+{E_2}) \cos ({\theta_-}) \sqrt{\frac{s-2 {M_\pi
+   }^2}{{{ \sf{ p}}_+}^2 \sin ^2(\alpha )+s}}-{E_1}+{E_2})^2\Big )\nonumber\\
+   &+&\left(\omega 
+   ({E_1}+{E_2}) \cos ({\theta_-}) \sqrt{\frac{s-2 {M_\pi }^2}{{{ \sf{ p}}_+}^2
+   \sin ^2(\alpha )+s}}-{E_1} \omega +{E_2} \omega +Q^2+s\right)\nonumber\\
+   &\times&\left(4 Re(A B^*)  \omega ^2
+   ({E_1}-{E_2}) \left(-({E_1}+{E_2}) \cos ({\theta_-}) \sqrt{\frac{s-2
+   {M_\pi }^2}{{{ \sf{ p}}_+}^2 \sin ^2(\alpha )+s}}+{E_1}-{E_2}\right) \nonumber\\
+   &+&16 \mid B\mid^2 \omega ^2
+   ({E_1}-{E_2})^2 \left(({E_1}+{E_2}) \cos ({\theta_-}) \sqrt{\frac{s-2
+   {M_\pi }^2}{{{ \sf{ p}}_+}^2 \sin ^2(\alpha )+s}}-{E_1}+{E_2}\right)^2\nonumber\\
+   &+&4
+   \mid B\mid^2 ({E_1}-{E_2})^2 \left(\frac{({E_1}+{E_2})^2 \left(2 {M_\pi
+   }^2-s\right)}{{{ \sf{ p}}_+}^2 \sin ^2(\alpha )+s}+({E_1}-{E_2})^2\right) \nonumber\\
+   &\times&\left.\left.\left(\omega 
+   ({E_1}+{E_2}) \cos ({\theta_-}) \sqrt{\frac{s-2 {M_\pi }^2}{{{ \sf{ p}}_+}^2
+   \sin ^2(\alpha )+s}}-{E_1} \omega +{E_2} \omega +Q^2+s\right)\right) \right)
+\eea
+\subsection{Amplitudes $A$ and $B$ for simulation}
+
+We need to have a parametrization which for now gives a sufficiently realistic description for carrying out simulations. We present here a model for $A(s,t,u)$ and $B(s,t,u)$ based on dispersion theory to take into account the FSI of the pions with addition of t- and u- channel exchanges of resonances. At present there are many works   with increasing level of rigor, with the latest ones being quite complicated. So, for a first approximation we adopt here one of the early models  by Donoghue and Holstein (1994).
+
+The Donoghue-Holstein model:  premises of the model: 1) only S-wave $\pi \pi$ FSI are considered, which is accurate at small $W_{\pi\pi}$. 2)  vector (also axial vector for the case of $\pi^+\pi^-$) exchanges in t- and u- channels of the $\gamma\gamma\to\pi\pi$ reaction. The latter give the t- and u- dependency.
+For the neutral pions the model gives:
+\bea
+s\;A(s,t,u)&=& -\frac 23(f_0(s)-f_2(s))+\frac 23 (p_0(s)-p_2(s))-\frac s 2\sum_{V=\rho,\omega} R_V (\frac{t+M_\pi^2}{t-M_V^2}+\frac{u+M_\pi^2}{u-M_V^2})\nonumber\\
+B(s,t,u)&=&-\frac 18 \sum_{V=\rho,\omega} R_V (\frac{1}{t-M_V^2}+\frac{1}{u-M_V^2})
+\eea
+Here the subindices 0 and 2 indicate the Isospin state of the pion pair. $f_I(s)$ admit a dispersive representation  for which we need the $I=0$ and 2 S-wave $\pi\pi$ phase shifts.
+In the case of the neutral pions we only have $\rho_0$ and $\omega$ exchanges, where here $R_V$ indicates the coupling in the vertex $V\to \gamma \pi^0$.
+Here we use:
+\beq
+R_V=\frac{6 M_V^2}{\alpha} \frac{\Gamma(V\to \pi \gamma)}{(M_V^2-M_\pi^2)^3}
+\eeq
+The functions $p_I(s)$ are known (given below by the model of resonance t- and u-channel exchanges), are real for positive $s$ and reproduce the smae discontinuity as $f_I(s)$ for negative $s$ . 
+
+The hard problem is to implement the dispersive representation for $f_I(s)$. We will neglect inelasticities in the $\pi \pi$ FSI.
+The DH model implements the approach of Morgan and Pennington who write a twice subtracted  dispersion relation for the combination $(f_I(s)-p_I(s))/\Omega_I(s)$, which has only a discontinuity for $s>4 M_\pi^2$ and is otherwise analytic everywhere. $\Omega_I(s)$ is the Omn\`es function given in terms of the corresponding $\pi\pi$ phase shift:
+\bea
+\Omega_I(s)&=&\exp\left(\frac s\pi\int_{4 M_\pi^2}^\infty \frac{\phi_I(s') }{s'-s} \frac{ds'}{s'}\right)\nonumber\\
+\Omega_I(s>4 M_\pi^2)&=&e^{i\phi_I(s)} \exp\left(\frac s\pi\int_{4 M_\pi^2}^\infty \frac{\phi_I(s')-\phi_I(s)}{s'-s} \frac{ds'}{s'}+\frac{\phi_I(s)}{\pi}\log\frac{4M_\pi^2}{s-4M_\pi^2}\right)
+\eea
+where the phases $\phi_0$ is related to the corresponding $\pi\pi$ phase shift: $\phi_0(s)=\theta(M-\sqrt{s}) \delta_0^0(s)+\theta( \sqrt{s}-M)(\pi-\delta_0^0(s))$, where $M$ is the mass of the $f_0$ resonance. For $I=2$ one can take $\phi_2(s)=\delta_0^2(s)$.\\
+We have that:
+\bea
+f_I(s)&=& p_I(s)+\Omega_I(s)\left(c_I+d_I\;s-\frac{s^2}{\pi} \int_{4M_\pi^2}^\infty p_I(s') \Im(\Omega_I^{-1}(s'))\frac {ds'} {(s'-s) s'^2}\right)
+\eea
+
+
+Finally, the functions $p_I(s)$ are as follows:
+
+\bea
+p_I(s)&=& f_I^{\rm Born}(s)+p_I^A(s)+p^\rho_I(s)+p_I^\omega(s)\nonumber\\
+p_0^A(s)=p_2^A(s)&=&\frac{L_9^r+L_{10}^r}{F_\pi^2}\left(s+\frac{M_A^2-M_\pi^2}{\beta(s)}\log\frac{1+\beta(s)+s_A/s}{1-\beta(s)+s_A/s}\right)\nonumber\\
+p_0^\rho(s)&=&\frac 32 R_\rho\left( \frac{M_\rho^2}{\beta(s)}  \log\frac{1+\beta(s)+s_\rho/s}{1-\beta(s)+s_\rho/s}\right)\nonumber\\
+p_2^\rho(s)&=&0\nonumber\\
+p_0^\omega(s)=-\frac 12 p_0^\omega(s)&=&-\frac 12 R_\omega\left( \frac{M_\omega^2}{\beta(s)}  \log\frac{1+\beta(s)+s_\omega/s}{1-\beta(s)+s_\omega/s}-s\right)
+\eea
+where $L_9^r$ and $L_{10}^r$ are the renormalized ${\ord{p^4}}$ LECs and given by: $L_9^r+L_{10}^r=1.43\pm 0.27\times 10^{-3}$, and:
+\bea
+s_i&=&2 (M_i^2-M_\pi^2)\nonumber\\
+R_\omega&=& 1.35/GeV^2;~~~R_\rho=0.12/GeV^2\nonumber\\
+\beta(s)&=&\sqrt{\frac{s-4 M_\pi^2}{s}}
+\eea
+  
+  Numerical implementation: we need a simple functional parametrization of the phase shifts (in progress). 
+  
+  \subsection{Parametrization of the S-wave $\pi\pi$ phase shifts }
+  
+The following figures show the present knowledge of the relevant phase shifts:
+\begin{center}
+{\includegraphics[scale=0.52]{I=0-pi-pi-S-wave-Phase-shift.pdf}{\includegraphics[scale=0.5]{I=2-pi-pi-S-wave-Phase-shift.pdf}
+\end{center}\\\\
+
+\begin{center}
+{\includegraphics[scale=0.79]{I=0-pi-pi-S-wave-Phase-shiftp.pdf}{\includegraphics[scale=0.5]{I=2-pi-pi-S-wave-Phase-shiftp.pdf}
+\end{center}\\
+ 
+ ~\\\\
+  
+  We fit to the phase shift data the following forms:
+  
+  \bea
+  \delta_0^I(s)&=& \arcsin\left(\frac{\Gamma_I}{2\sqrt{(\sqrt{s} - M_I)^2 +\frac{ \Gamma_I^2}{4}}}\right)+\sum_{n=0}^N a_n (\sqrt{s})^n
+  \eea
+  where we include one single resonance for each $I=0,2$.
+  
+  For the available data we need only up to $N=3$ for $I=0$, with the result:
+  \bea
+  M_0=0.994 GeV;&&\Gamma_0=0.0624 GeV\nonumber\\
+  a_0=-1.439;&&a_1=6.461 /GeV;~~a_2=-5.529 /GeV^2;~~a_3=2.022 /GeV^3
+  \eea
+For the case $I=2$ one finds that   the resonance term is not needed at all and a good fit is provided with $N=3$ with the result:
+\beq
+ a_0=-0.878;&&a_1=-0.611 /GeV;~~a_2=-0.083 /GeV^2;~~a_3=0.115 /GeV^3
+\eeq
+
+The figure shows the parametrized phase shifts along with the corresponding phase $\phi_I^0$.
+
+\begin{center}
+{\includegraphics[scale=0.62]{PhS-00.pdf}~~~~~{\includegraphics[scale=0.62]{PhS-02.pdf}}
+\end{center}\\
+ The resulting Omn\`es functions are shown in the figure, where the red curves show the real part and blue the imaginary ones.:
+ 
+ \begin{center}
+{\includegraphics[scale=0.62]{Omnes-00.pdf}~~~~~{\includegraphics[scale=0.62]{Omnes-02.pdf}}\\
+\includegraphics[scale=0.82]{OmnesFunctionsFig.pdf}
+\caption{We used the integration in $s'$ up to 1.4 and 2.4 $GeV^2$ to see how sensitive is the Omne\`es function to the high energy inputs of the phase shifts. In red the real parts and in blue the imaginary parts. }
+\end{center}\\
+
+The amplitude $A(s,t,u)$ in the limit of real photons, and in the approach followed here of keeping only the S-wave, becomes only a function of $s$. Using the results obtained here and and a fit to the available cross section (see the next section), one obtains that $A$ is real and given by the figure below. We are working on a parametrization at this point.
+	\begin{figure}
+\begin{center}
+
+	{\includegraphics[scale=0.9729]{AmplA-Fig.png}}\\
+\caption{Red: $ Re(A(s))$,~Blue: $Im((A(s))$}
+
+		\end{center}
+	\end{figure}\\
+
+{\red Still working on improving parametrization of the Amplitude A}
+
+Result of one parametrization: since we are using the S-wave approximation, there is no dependency on $t$, so:
+\bea
+Re\,A_{par}(s)&=&-\frac{0.0401449}{\left| s-(0.99\, -i\;0.027 )\right| }-3.42726\; s\nonumber\\
+&+&0.00399002\; e^{5.90315 (s-1.48297)^2}-0.00202174\; e^{8.10357
+	(s-1.37113)^2}+0.000320964 e^{9.36221 (s-1.32585)^2}
+\nonumber\\
+&+&0.000249196\; e^{9.41227 (s-1.31682)^2}+0.000158993 \;e^{8.04004
+	(s-1.25463)^2}\nonumber\\
+&+&531.611\; \tanh (21.5329 (s-0.00549155))-522.191
+\eea
+The imaginary part of $A$ is very small so we neglect it for now.
+
+
+\section{$\gamma\gamma\to\pi^0\pi^0$ Cross section }
+
+For real photons the  $\gamma\gamma\to\pi^0\pi^0$ cross section becomes:
+\bea
+\sigma_{\gamma\gamma\to\pi^0\pi^0}(|\cos \theta|<Z)(s)&=&\frac{\pi \alpha_{EM}^2}{s^2}
+\int_{-Z}^Z  \frac 14  \sqrt{s (s -4 M_\pi^2)} \\
+&\times&(\mid A(s,t,u) s-M_\pi^2  B(s,t,u)\mid^2+\frac {1}{s^2} (M_\pi^4- t\,u)^2\mid B(s,t,u)\mid ^2) dz\nonumber
+\eea
+where $z=\cos\theta$ and CM we have: $s+t+u=2 M_\pi^2$, and $t=M_\pi^2-\frac s 2+\frac 14\sqrt{s(s-4M_\pi^2)} z$.
+
+
+Note that for both amplitudes $A$ and $B$ the dominant component for $s<1\;GeV^2$ is the S-wave, so that we have $A=A(s)$ and $B=B(s)$. Using that\\
+ $t\;u=\frac{1}{16} \left(s \;z^2 \left(4 {M_\pi
+	}^2-s\right)+4 \left(s-2 {M_\pi }^2\right)^2\right)$\\
+where $\cos \theta=z$.
+
+\bea
+\sigma_{\gamma\gamma\to\pi^0\pi^0}(|\cos \theta|<Z)(s)&=&\frac{\pi \alpha_{EM}^2}{s^2}
+    \frac Z2  \sqrt{s (s -4 M_\pi^2)} \\
+&\times&(\mid A(s) s-M_\pi^2  B(s)\mid^2\nonumber\\
+&+&\frac {1}{s^2} \left(M_\pi^4- \frac{1}{16}(\frac{Z^2}{3} s(4 M_\pi^2-s)+4(s-2 M_\pi^2)^2)\right)\mid B(s)\mid ^2) \nonumber
+\eea
+
+
+
+We fit to the Cristal Ball data the parameters $c_0,\;d_0,\;c_2,\;d_2$ which give in corresponding units: 
+\bea
+c_0&=& -0.529 \nonumber\\
+d_0&=&-2.033 \nonumber\\
+c_2&=&0.953\nonumber\\
+d_2&=& -1.271\nonumber\\
+\eea
+
+The result is shown in the figure:\\\\
+\begin{figure}
+ \begin{center}
+{\includegraphics[scale=0.92]{CrossSectionFig.pdf}
+\caption{ $\gamma\gamma\to\pi^0\pi^0$ cross section integrated for the scattering angle $|\cos \theta|<0.8$. Data from the Cristal Ball}
+\end{center}
+\end{figure}
+
+{\red In progress: a fit to a wider range in $s$ to include if possible the region of the $f_0$}
+
+\section{Possible hadronic exchange background}
+
+The possible hadronic t-exchange that can contribute to the $\pi^0\pi^0$ coherent photoproduction  will involve    $\rho^0$ and $\omega$ exchanges. We need to model this.
+
+\section{Appendix A}
+\subsection{$U_A$ and $P_A$ in ChPT (Bellucci et al)}
+\bea
+U_A&=&\frac{2}{s F_\pi^4}G_\pi(s)\left(  (s^2-M_\pi^2) J_\pi(s)+C(s)\right)+\frac{\ell_\Delta}{24 \pi^2 F_\pi^4}(s-M_\pi^2) J_\pi(s)\nonumber\\
+&+&\left . \frac{\ell_2-5/6}{144 \pi^2 s F_\pi^4}(s-4 M_\pi^2)(H(s)+4(s G_\pi(s)+2 M_\pi^2(\tilde G_\pi(s)-3\tilde J_\pi(s)))d^2_{00})\nonumber\\
+P_A&=&\frac{1}{(4\pi)^2 F_\pi^4}(a_1 M_\pi^2+a_2 s)
+\eea
+where the constants $a_1$ and $a_2$ need to be fitted, and:
+\bea
+J_\pi(s)&=&-\frac{1}{(4\pi)^2}\int_0^1 dx \log(1-\frac{s}{M_\pi^2}x(1-x))=\frac{2}{(4\pi)^2}\left(1-\frac{ \sqrt{4-\frac{s}{{M_\pi}^2}} \tan ^{-1}\left(\frac{\sqrt{\frac{s}{{M_\pi}^2}}}{\sqrt{4-\frac{s}{{M_\pi}^2}}}\right)}{\sqrt{\frac{s}{{M_\pi}^2}}}\right)\nonumber\\
+\tilde{J_\pi}(s)&=& J_\pi(s)-s J'_\pi(0)\nonumber\\
+\tilde{G_\pi}(s)&=& G_\pi(s)-s \,G'_\pi(0)\nonumber\\
+H_\pi(s)&=&(s-10\, M_\pi^2)\;J_\pi(s)+6\,M_\pi^2\; G_\pi(s)
+\eea
+and:
+\bea
+C(s)&=&\frac{1}{48 \pi^2}\left(2(\ell_1-\frac 43)(s-2M_\pi^2)^2+\frac13(\ell_2-\frac 56)(4s^2-8sM_\pi^2+16 M_\pi^4)\right.\nonumber\\
+&-&\left. 3 M_\pi^4 \ell_3+12 M_\pi^2(s-M_\pi^2)\ell_4-12 s M_\pi^2+15 M_\pi^4\right\Big)\nonumber\\
+d^2_{00}&=&\frac 12(3 \cos^2 \theta_{CM}-1)
+\eea
+where  $\theta_{CM}$ is the $\gamma\gamma^*\to \pi\pi$ scattering angle in CM, and the low energy constants $\ell_i$ are known.
+
+Note that the amplitude depends only on $s$ except for the term $d^2_{00}$. It is possible that this term will be entirely irrelevant at low $W_{\pi\pi}$ (need to check).
+\subsection{$U_B$ and $P_B$}
+\bea
+U_B&=&\frac{\ell_2-\frac 56}{288\pi^2 F_\pi^4 s} H_\pi(s)\nonumber\\
+P_B&=&\frac{b}{(4 \pi F_\pi)^4}
+\eea
+where $b$ is fitted.
+
+\section{Appendix B}
+CM kinematics
+
+
+Useful invariants in Lab frame:
+\bea
+q&=& { \sf{ p}}_+-k\nonumber\\
+\epsilon^\mu q_\mu&=& -\vec \epsilon \cdot \vec q=-\vec \epsilon \cdot  \vec  { \sf{ p}}_+=-{ \sf{ p}}_+\sin\theta_+\cos\phi_+\nonumber\\
+\epsilon^\mu p_{-\mu}&=& -\vec \epsilon \cdot \vec { \sf{ p}}_-   =-{ \sf{ p}}_-\sin\theta_-\cos\phi_-\nonumber\\
+k^\mu J_\mu&=& \omega Z e F(Q^2)\nonumber\\
+k^\mu p_{+\mu}&=&k^\mu q_{\mu}=\omega(E_1+E_2-{ \sf{ p}}_+ \cos\theta_+)\nonumber\\
+q^\mu p_{+\mu}&=&s-k^\mu p_{+\mu}\nonumber\\
+Q^2&=&-s+2\, k^\mu p_{+\mu}=-s+2\omega((E_1+E_2)- { \sf{ p}}_+  \cos \theta_+)\nonumber\\
+&=& 2 \omega { \sf{ p}}_+(1-\cos \theta_+)+s (\frac{\omega}{{ \sf{ p}}_+}-1)-s^2\frac{\omega}{4 { \sf{ p}}_+^3}+\cdots\nonumber\\
+q^\mu p_{-\mu}&=&-k^\mu p_{-\mu}=-\omega(E_1-E_2-{ \sf{ p}}_- \cos\theta_-)
+\eea
+
+
+\bea
+s&=& 4\; \omega_{CM} ^2=p_+ \cdot p_+\nonumber\\
+-\frac 12 \sqrt{s(s-4M_\pi^2)}\cos \theta_{CM}&=& k\cdot p_-=\omega(E_1-E_2- { \sf{ p}}_-\cos\theta_-)
+\eea
+where we can use:
+\bea
+E_1+E_2&=& \sqrt{s+{ \sf{ p}}_+^2}\nonumber\\
+E_1-E_2&=&\frac{{ \sf{ p}}_+ \sqrt{s-4 M_\pi^2}\cos\alpha}{\sqrt{s+{ \sf{ p}}_+^2\sin^2\alpha}}
+\eeq
+\newpage
+\section{Relation between the amplitudes of Donoghue-Holstein and Bellucci-Gasser-Sainio}
+
+
+The two basis Compton tensors are related by:
+
+\bea
+T^{DH}_{1\mu\nu}&=&-T^{BGS}_{1\mu\nu}\nonumber\\
+T^{DH}_{2\mu\nu}&=&\frac 14 T^{BGS}_{1\mu\nu}+\frac 1{8s}  T^{BGS}_{2\mu\nu}
+\eea
+
+and the amplitudes are related as follows:
+\bea
+A^{DH}&=&-A^{BGS}-2 s B^{BGS}\nonumber\\
+B^{DH}&=&8 s B^{BGS}
+\eea
+
+\section{ Primakoff Cross Section }
+
+\bea
+\frac{d^2\sigma}{d\theta\;d W_{\pi\pi}}&=&
+(2 \pi sin\theta)\times 2 \alpha \frac{Z^2}{
+\pi^2} E_\gamma^4\; \beta^2 \; \frac{sin^2\theta}{
+W_{\pi\pi}}  \; \frac{\sigma(W_{\pi\pi})}{
+Q^4} 
+\eea
+\begin{figure}
+	\begin{center}
+			{\includegraphics[scale=0.259]{XSection-3D.pdf}}\\
+		\caption{Primakoff cross section for $\pi^0\pi^0$.}
+		\end{center}
+\end{figure}\\
+\newpage
+{\bf HOMEWORK }\\\\
+
+1) Study the photon polarization dependency. (Dai \& Pennington studied the effect of polarization)\\
+
+2) Another way to provide the amplitude $A$: spline or table.\\\\
+
+
+ 
+
+
+\end{document}
