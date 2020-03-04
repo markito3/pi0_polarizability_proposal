@@ -9,7 +9,9 @@ JLAB_Overview.tex \
 JLAB_Pi0Normalization.tex \
 JLAB_Sensitivity.tex \
 Pi0Polarizability.tex \
-TheoreticalPredictions.tex
+TheoreticalPredictions.tex \
+Appendix_theory.tex
+
 #PDFLATEXFLAGS = -interaction=nonstopmode
 
 all : $(DOCROOT).pdf

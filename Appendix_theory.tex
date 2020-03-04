@@ -1,0 +1,150 @@
+\def\red{\color{red}}
+\def\blue{\color{blue}}
+\def\green{\color{green}}
+\def\violet{\color{violet}}
+\def\orange{\color{orange}}
+\newcommand{\fr}{\frac}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\zero}{{(0)}}
+\newcommand{\one}{{(1)}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\ord}[1]{{\cal{O}}( #1 )}
+\newcommand{\B}{{\bf B}}
+\newcommand{\Bdag}{{\bf B^\dagger}}
+\newcommand{\cgsu}[3]{ \langle #1 #2 \mid #3\rangle}
+\newcommand{\water}[2]{ #1,$^2$,#2}
+\def \ba{\begin{eqnarray}}\def\ea{\end{eqnarray}}
+\def\bc{\begin{center}}\def\ec{\end{center}}
+\def\nn{\nonumber\\}\def\v{\vec}
+
+\section{More on theoretical predictions}
+
+The scattering amplitude for $\gamma\gamma^*\to\pi^0\pi^0$ is given in
+terms of the Compton tensor, whose low energy expansion in the Compton
+scattering channel $\gamma\pi^0\to\gamma\pi^0$ is given in terms of
+the electric and magnetic polarizabilities of the $\pi^0$. For the
+case of interest with one real photon, the Compton tensor is given in
+by two amplitudes, namely:
+   
+   \bea
+   T_{\mu\nu}&=&-(A(s,t,u)+\frac 14 B(s,t,u)) (\frac 12\, s \;g_{\mu\nu}-k_\nu q_\mu)\\
+   &+&\frac{1}{4s} B(s,t,u)  ( (s-q^2) p_{-\mu} p_{-\nu}-2(k\cdot p_-\; q_\mu p_{-\nu}+q\cdot p_{-} k_\nu p_{-\mu}-g_{\mu\nu} k \cdot p_-\; \;q\cdot p_-)
+   \eea
+
+Here $s=W_{\pi\pi}^2$ is the invariant mass squared of the two
+$\pi^0$s, $k$ the momentum of the beam photon, $q$ the momentum of the
+virtual photon, and $p_-$ the $p_-=p_1-p_2$ the momentum difference
+between the two pions.
+  
+  The limit of interest for the polarizabilities is:
+  \bea
+ \alpha_{\pi}&=& - \frac{\alpha}{2 M_\pi}  (A(s,t,u)-\frac 2 s M_\pi^2 B(s,t,u))\arrowvert_{s=0, t=u=M_\pi^2}\nonumber\\
+ \beta_{\pi}&=&
+  \frac{\alpha}{2 M_\pi} A\arrowvert_{s=0, t=u=M_\pi^2}
+  \eea
+  where $ \alpha_{\pi}$ $ \beta_{\pi}$ are the electric and magnetic polarizabilities respectively.
+  
+The low energy limit is analyzed in ChPT. At the lowest significant
+order, i.e., one loop, the $\pi^0$ polarizabilities are entirely given
+in terms of known quantities, namely:
+\bea
+\alpha_{\pi_0}&=&-\beta_{\pi_0}= -\frac{\alpha}{96 \pi^2 M_\pi F_\pi^2}\simeq -0.55\times 10^{-4}~{\rm fm}^3
+\eea
+The positive magnetic susceptibility indicates that the $\pi_0$ is
+diamagnetic, and naturally the negative electric polarizability tells
+that it behaves as a dielectric.
+
+There are higher order corrections in the chiral expansion to the
+above prediction corresponding to a two-loop calculation, which is
+undefined up to two low energy constants $h_\pm$ in the notation of
+Ref. \cite{Bellucci:1994eb}, expected to be significant for the
+corrections.
+
+The amplitudes $A$ and $B$ are constrained by unitarity and
+analiticity to satisfy dispersion relations. In particular below
+$s\sim 0.8\text{ GeV}^2$ the dominant contributions are for the pair
+of pions in an S-wave. The rather well established S-wave phase shifts
+thus allow for implementing dispersion
+relations \cite{Donoghue:1993kw,
+Oller:2008kf,Moussallam:2013una,Dai:2014zta,Dai:2014lza,Dai:2016ytz}.
+In this proposal the model by Donoghue and
+Holstein \cite{Donoghue:1993kw} for implementing the dispersive
+representation using S-wave final state interaction was adopted. The
+model implements twice subtracted dispersion relations for the isospin
+0 and 2 components of the amplitude A with the addition of t- and
+u-channel resonance exchanges for both A and B. The four subtraction
+constants require the experimental input of the cross section to be
+measured by the proposed experiment.
+
+A summary of useful  theory results is the following:  
+
+1) representation of the Compton amplitudes:
+\bea
+s\;A(s,t,u)&=& -\frac 23(f_0(s)-f_2(s))+\frac 23 (p_0(s)-p_2(s))-\frac s 2\sum_{V=\rho,\omega} R_V (\frac{t+M_\pi^2}{t-M_V^2}+\frac{u+M_\pi^2}{u-M_V^2})\nonumber\\
+B(s,t,u)&=&-\frac 18 \sum_{V=\rho,\omega} R_V (\frac{1}{t-M_V^2}+\frac{1}{u-M_V^2})\nonumber\\
+R_V&=&\frac{6 M_V^2}{\alpha} \frac{\Gamma(V\to \pi \gamma)}{(M_V^2-M_\pi^2)^3}
+\eea
+where $V=\rho,\;\omega$, 
+\bea
+p_I(s)&=& f_I^{\rm Born}(s)+p_I^A(s)+p^\rho_I(s)+p_I^\omega(s)\nonumber\\
+p_0^A(s)=p_2^A(s)&=&\frac{L_9^r+L_{10}^r}{F_\pi^2}\left(s+\frac{M_A^2-M_\pi^2}{\beta(s)}\log\frac{1+\beta(s)+s_A/s}{1-\beta(s)+s_A/s}\right)\nonumber\\
+p_0^\rho(s)&=&\frac 32 R_\rho\left( \frac{M_\rho^2}{\beta(s)}  \log\frac{1+\beta(s)+s_\rho/s}{1-\beta(s)+s_\rho/s}\right)\nonumber\\
+p_2^\rho(s)&=&0\nonumber\\
+p_0^\omega(s)=-\frac 12 p_0^\omega(s)&=&-\frac 12 R_\omega\left( \frac{M_\omega^2}{\beta(s)}  \log\frac{1+\beta(s)+s_\omega/s}{1-\beta(s)+s_\omega/s}-s\right),
+\eea
+where $\beta(s)=\sqrt{\frac{s-4 M_\pi^2}{s}}$, $M_A$ the mass of the $A_1$ resonance. The $f_I$s are given by the dispersive representation:
+\bea
+f_I(s)&=& p_I(s)+\Omega_I(s)\left(c_I+d_I\;s-\frac{s^2}{\pi} \int_{4M_\pi^2}^\infty p_I(s') \text{Im}(\Omega_I^{-1}(s'))\frac {ds'} {(s'-s) s'^2}\right),
+\eea
+with the Omn\`es function:
+\bea\Omega_I(s>4 M_\pi^2)&=&e^{i\phi_I(s)} \exp\left(\frac s\pi\int_{4 M_\pi^2}^\infty \frac{\phi_I(s')-\phi_I(s)}{s'-s} \frac{ds'}{s'}+\frac{\phi_I(s)}{\pi}\log\frac{4M_\pi^2}{s-4M_\pi^2}\right).
+\eea
+the phases $\phi_I$ are related to the corresponding $\pi\pi$ S-wave phase shifts according to:
+\bea
+\phi_0(s)&=&\theta(M-\sqrt{s}) \delta_0^0(s)+\theta( \sqrt{s}-M)(\pi-\delta_0^0(s))\nonumber\\
+\phi_2(s)&=&\delta_0^2(s),
+\eea
+where $M$ is the mass of the $f_0$ resonance.  
+
+The values used for the parameters entering the representations above are:
+\bea
+L_9^r+L_{10}^r&=&1.43\pm 0.27\times 10^{-3}\nonumber\\
+s_i&=&2 (M_i^2-M_\pi^2)\nonumber\\
+R_\omega&=& 1.35/\mathrm{GeV}^2;~~~R_\rho=0.12/\mathrm{GeV}^2
+\eea
+
+and the $\pi\pi$ phase shifts are well approximated up to $\sqrt{s}\sim 1.5~\mathrm{GeV}$ by the parametrization:
+\bea
+\delta_0^I(s)&=& \arcsin\left(\frac{\Gamma_I}{2\sqrt{(\sqrt{s} - M_I)^2 +\frac{ \Gamma_I^2}{4}}}\right)+\sum_{n=0}^N a_n\;\, (\sqrt{s})^n
+\eea
+where we include one single resonance for each $I=0,2$.
+
+For the available data we need only up to $N=3$ for $I=0$, with the result:
+\bea
+M_0=0.994~\mathrm{GeV};&&\Gamma_0=0.0624~\mathrm{GeV}\nonumber\\
+a_0=-1.439;&&a_1=6.461 /\mathrm{GeV};~~a_2=-5.529 /\mathrm{GeV}^2;~~a_3=2.022 /\mathrm{GeV}^3
+\eea
+For the case $I=2$ one finds that   the resonance term is not needed at all and a good fit is provided with $N=3$ with the result:
+\bea
+a_0=-0.878;&&a_1=-0.611 /\mathrm{GeV};~~a_2=-0.083 /\mathrm{GeV}^2;~~a_3=0.115 /\mathrm{GeV}^3
+\eea
+
+
+The $\gamma\gamma\to\pi_0\pi_0$ in the S-wave approximation
+valid up to about $\sqrt{s}\sim 0.9~\mathrm{GeV}$ is given by:
+\bea
+\sigma_{\gamma\gamma\to\pi^0\pi^0}(|\cos \theta|<Z)(s)&=&\frac{\pi \alpha_{EM}^2}{s^2}
+\frac Z2  \sqrt{s (s -4 M_\pi^2)} \\
+&\times&(\mid A(s) s-M_\pi^2  B(s)\mid^2\nonumber\\
+&+&\frac {1}{s^2} \left(M_\pi^4- \frac{1}{16}(\frac{Z^2}{3} s(4 M_\pi^2-s)+4(s-2 M_\pi^2)^2)\right)\mid B(s)\mid ^2) \nonumber
+\eea
+ Fitting to the Cristal Ball data\cite{Marsiske:1990hx} the parameters $c_0,\;d_0,\;c_2,\;d_2$ can be estimated,  giving in the corresponding units: 
+\bea
+c_0&=& -0.529 \nonumber\\
+d_0&=&-2.033 \nonumber\\
+c_2&=& 0.953\nonumber\\
+d_2&=& -1.271.
+\eea
