@@ -1,29 +1,27 @@
 \section{Errors and Sensitivity}
-
-
-The anticipated statistical errors, including the error from azimuthal fitting of the data, are shown in Fig. \ref{cpp_theory_fit}.
-The errors assume 20 days of running on a 5 \% radiation length $^{116}$Sn target, 10$^7$ photons/s, and nominal acceptance for $\pi^+ \pi^-$.
+We summarize the anticipated errors in the determination of the $\pi^0$ polarizability. We assume 
+20 days of running on a 5\% radiation length $^{208}$Pb target, 10$^7$ photons/s, and nominal acceptance for $\pi^0 \pi^0$.
 Table \ref{errors} summarizes the estimated statistical and systematic errors. In the following we describe each of
 these contributions in detail: 
 
 %\end{landscape}
 % \begin{landscape}
 \begin{table}[bt]
-\caption{Statistical errors, correction factors, and uncertainties in correction factors.
+\caption{Uncertainties in the extraction of $\pi^0$ polarizabilities $\alpha_{\pi^0}-\beta_{\pi^0}$.
 \label{errors}
 }
 \begin{center}
-\begin{tabular}{|l|c|c|c|c|c|c|c|c|}
+\begin{tabular}{|l|l|c|c|}
 \hline
 \hline
-    Errors and correction factors  &  Correction       & Statistical uncertainty    \\ 
-                                                         &     factor            & in correction factor    \\  \hline \hline
-  Overall statistical error  &      &  XX \%    \\ \hline
-  Flux normalization &     &  XX \%     \\ \hline
-  Background subtraction  & XX \% &  XX \%   \\ \hline
-  Detector acceptance and efficiency &  XX \%   &   XX\%   \\ \hline
-  Total systematic error &   & XX \% \\ \hline
-  Projected error in $\alpha - \beta$ &   &  XX\%  \\ \hline
+  &  Source  & Uncertainty   \\  \hline \hline
+  1 & Signal extraction  &  5 \%    \\ \hline
+  2 & Flux normalization &  1.5 \%     \\ \hline
+  3 & Background subtraction  & $<$1 \%  \\ \hline
+  4 & Detector acceptance and efficiency &  3.5 \%   \\ \hline
+  5 & Total systematic error  &  3.9\% \\ \hline
+  6 & Total error on cross section  &  6.3\% \\ \hline
+  7 & Projected error in $\alpha - \beta$ &  49\%  \\ 
  \hline
  \hline
 \end{tabular}
@@ -34,41 +32,37 @@ these contributions in detail:
 \begin{enumerate}
 
 \item
-Signal extraction.
-Overall statistical error:  This aggregate error is based on fitting the $\phi_{\pi \pi}$ distribution to
-extract the Primakoff yield, and then fitting a theoretical curve to the W$_{\pi \pi}$ data points (see figures \ref{sample_phi_psi_fit}-\ref{cpp_theory_fit}).
+Primakoff signal extraction from the angular distribution (Fig.\,\ref{fig:fit_Primakoff_sigma}), which also contains nuclear coherent contributions to the cross section. This uncertainty
+is approximately 5\%.
 
 \item
-Flux normalization. 2\%.
+Flux normalization. We have several methods for determining the flux (Section\,\ref{sec:flux}). The Primex-D experiment expects an uncertainty of 1.5\% and we use that as our estimate here.
 
 \item
-Background subtraction.
+Subtraction of backgrounds other than nuclear coherent. These backgrounds are not expected to be significant ($< 1\%$) and studies are on-going. 
 
 \item
-Detector acceptance and efficiency.
+Detector acceptance and efficiency. We can measure the detector acceptance times efficiency for the process $\gamma Pb \rightarrow \pi^0 Pb$ with an accuracy of 3.5\% (Section\,\ref{sec:pi0norm}), which
+should allow us to reduce the systematic uncertainty in the acceptance calculation for the process of interest to this level.
 
 \item
-Total systematic error: Combining the systematic errors in quadrature gives 1.5\%.
+Total systematic error (items 2-4): combining the systematic errors in quadrature gives 3.9\%.
+
+\item 
+Error on cross section (quadrature sum of statistical and systematic uncertainties): 6.3\%.
 
 \item
-Projected error in $\alpha - \beta$: Combining the statistical and systematic errors in quadrature,  and using the approximate sensitivity of the
-cross sections to $\alpha - \beta$, ($\Delta(\alpha - \beta)/\Delta \sigma = 130\% /20\%$), gives an estimated error of 10 \%.  The absolute 
-error in $\alpha -\beta$ is therefore $\pm 0.6 \times 10^{-4} fm^3$ . 
+The current estimate by Dai and Pennington (Table II in Ref.\,\cite{Dai:2016ytz}) indicates
+that a 13\% determination of
+$\sigma(\gamma\gamma\rightarrow\pi^0\pi^0)$ will determine the
+combination $\alpha_{\pi^0}-\beta_{\pi^0}$ to a precision of 100\%, i.e., $\Delta(\alpha_{\pi^0}-\beta_{\pi^0}) \sim 7.7\Delta(\sigma$) .
+From here we estimate that our uncertainty on $\Delta(\alpha_{\pi^0}-\beta_{\pi^0}) \sim$ 49\%. We note that the basis for extracting the polarizabilities may be improved
+in the near future and theoretical effort is being directed specifically toward this goal.
 
 \end{enumerate}
 
-\section{Summary and beam request CPP}
-
-Table \ref{request} summarizes the beam request and experimental requirements for the measurement.  20 days are requested for
-data production, which  will allow the statistical error to be reasonably below the projected systematic
-error, 0.6\,\% versus 1.5\,\%.  The are several non-standard installations required for the running of the
-experiment: (1) the liquid hydrogen target will be  removed, and a solid target installed near the upstream
-entrance of the magnet, (ii) the muon system will be installed and calibrated, and (iii) it is likely that the experiment
-will require a customized trigger  configuration due to the limited  response of FCAL for charged pions.  
-Five running  days are requested for the calibration of the muon chambers and testing of the DAQ electronics and trigger. 
-
 \begin{table}[bt]
-\caption{Beam request and running conditions.
+\caption{Approved beam request and running conditions for CPP. NPP would run concurrently.
 \label{request}
 }
 \begin{center}
@@ -78,7 +72,7 @@ Five running  days are requested for the calibration of the muon chambers and te
   Running condition  &            \\ \hline
   Days for production running  &   20   \\ \hline
   Days for calibrations &  5       \\ \hline
-  Target   & $^{116}$Sn   \\ \hline
+  Target   & $^{208}$Pb   \\ \hline
   Photon intensity in coherent peak &   10$^7$ photons/s     \\ \hline
   Edge of coherent peak  &  6 GeV   \\ \hline
  \hline
@@ -86,30 +80,30 @@ Five running  days are requested for the calibration of the muon chambers and te
 \end{tabular}
 \end{center}
 \end{table}
-
+ 
 \section{Summary and beam request}
-
 We have investigated the possibility of determining the neutral pion
-polarizabilities $\alpha_{\pi^0}-\beta_{\pi^0}$ by making a
+polarizabilities $\alpha_{\pi^0}-\beta_{\pi^0}$, a quantity for which there are no existing measurements.
+Our proposal is to extract the polarizability from a 
 measurement of the cross section of the Primakoff reaction $\gamma
 \rm{Pb}\rightarrow \pi^0 \pi^0 \rm{Pb}$. We propose to make this
 measurement using data taken simultaneously with the CPP\cite{CPPexp}
-experiment in Hall D. The existing GlueX detector has sufficient
-resolution and high acceptance for this process. We expect to collect approximately 3000 signal events during the
+experiment in Hall D. Table \ref{request} summarizes the approved beam request for the CPP experiment.
+The existing GlueX detector has sufficient
+resolution and high acceptance for this process. We expect to collect approximately 2500 signal events during the
 approved 20 PAC days. The anticipated statistical uncertainties on
 the signal represent a significant improvement over existing data as shown in Fig.\,\ref{fig:sigma_2pi0_figs_4}.
+Using the estimate by Dai and Pennington \cite{Dai:2016ytz} we expect to be able to make the first extraction of the 
+$\alpha_{\pi^0}-\beta_{\pi^0}$ polarizability with an uncertainty of 49\%.
 
 \begin{figure}[tpb]
 \centering
 \includegraphics[page=4,width=4.75in]{figures/sigma_2pi0_figs.pdf}
-\caption{Estimated statistical uncertainties on determining $\sigma(\gamma\gamma\rightarrow\pi^0\pi^0$) in the absence of background during 20 PAC days running simultaneously with the approved CPP experiment. The data points from the single previous measurement
-are shown for comparison.
+\caption{Estimated statistical uncertainties on determining $\sigma(\gamma\gamma\rightarrow\pi^0\pi^0$) during 20 PAC days running simultaneously with the approved CPP experiment. The data points from the single previous Cristal Ball measurement \cite{Marsiske:1990hx} are shown for comparison.
 \label{fig:sigma_2pi0_figs_4}}
 \end{figure}
 
-The current estimate by Dai and Pennington \cite{Dai:2016ytz} indicates
-that a 1.3\% determination of
-$\sigma(\gamma\gamma\rightarrow\pi^0\pi^0)$ will determine the
-combination $\alpha_{\pi^0}-\beta_{\pi^0}$ to a precision of 10\%,
-but this estimate may be improved in the future with more kinematic-specific analysis. The theoretical work to model and to understand the backgrounds, such as
-hadronic $t$-exchange involving $\rho^0$ and $\omega$, is ongoing.
+
+
+
+
