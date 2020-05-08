@@ -15,8 +15,8 @@ are expected to be smaller than those for the single $\pi^0$ channel.
 \begin{tabular}{|l|c|c|}
 \hline
 \hline 
- Component Fraction & $\gamma\,Pb\to \pi^0\, Pb$  & $\gamma\,Pb\to \pi^0\pi^0\, Pb$ \\  
-                    &                            & (This study) \\  \hline
+ Integrated Fraction & $\gamma\,Pb\to \pi^0\, Pb$  & $\gamma\,Pb\to \pi^0\pi^0\, Pb$ \\  
+  ($\theta <$ 1.5 degrees)                    &       & (This study) \\  \hline
   Primakoff signal  &   1.0   & 1.0   \\ \hline 
   Nuclear Coherent (NC)  & 0.39  &   0.38   \\ \hline 
   Interference  & 0.12  &  0.17   \\ \hline 
@@ -39,6 +39,16 @@ are expected to be smaller than those for the single $\pi^0$ channel.
 \label{fig:Diagram}}
 \end{center}
 \end{figure}
+
+ \begin{figure}[tbh]
+\begin{center}
+\includegraphics[height=5cm,clip=true]{figures/Primex_sigmas_c1.png} \hspace{1cm}
+\caption{Integrated angular distribution for the $\pi^0$ in $\gamma\,Pb\rightarrow \pi^0\,Pb$ as a function of the upper limit of integration.
+\label{fig:Diagram}}
+\end{center}
+\end{figure}
+
+
 
 We first classify the various backgrounds and then describe them in more detail one at a time.
 We note that two important backgrounds for the charged-pion polarizability experiment do not contribute in this experiment:
@@ -129,7 +139,7 @@ Bottom right) Polar angle of one pion in the $2\pi$ center-of-mass.
 Figure\,\ref{fig:decomposition_PrimNC} shows distributions of interest for a sample of Primakoff signal and
 nuclear coherent background events in an approximate proportion observed for single pion production. The strong phase between the two production mechanisms is set to
 75 degrees for this simulation, where an angle of zero produces maximum interference. This angle must be determined experimentally. 
-The distinguishing distributions are shown in the top panel: the 2$\pi$ mass and the 2$\pi$ scattering angle distributions. The Primakoff signal peaks at threshold and at about 0.2 degrees, whereas the nuclear coherent signal rises from threshold as expected from $f0(500)$ production and peaks at an angle of about 0.75 degrees. The azimuthal angular distribution is the same for both signal and background and has no discriminating power. The angular distribution of the pions in
+The distinguishing distributions are shown in the top panel: the 2$\pi$ mass and the 2$\pi$ scattering angle distributions. The Primakoff signal peaks at threshold and at about 0.2 degrees, whereas the nuclear coherent signal rises from threshold as expected from $f0(500)$ production and peaks at an angle of about 0.75 degrees. The azimuthal angular distribution is the same for both signal and background and has no discriminating power. The angular distributions of the pions in
 the center of mass of the $2\pi$ system are all uniform, so do not help in distinguishing the signal from the nuclear coherent.  
 
 \begin{figure}[tbp]
@@ -145,7 +155,7 @@ Left) Two-pi mass. Center) Two-pi scattering angle. The drop of the generated di
 \subsection{Incoherent two-pion production}
 In addition to the coherent production of two pions off the nucleus, two pions may also be produced via the elementary reaction $\gamma N\to \pi^0 \pi^0 N$, breaking up the nucleus in the process. We model the incoherent background with a mass distribution given by the $f0(500)$, but with an exponential $t$ dependence given by $e^{Bt}$, with $B=3.6$ GeV$^{-2}$. The slope is taken from Ref.\cite{Battaglieri:2009aa} and has very large uncertainties. However, as long the slope is small compared to Primakoff production, which has an effective slope of $B\sim560$ GeV$^{-2}$, it does not change the picture. The mass and angular dependencies are shown in Fig.\,\ref{fig:IC}. The strength is small at threshold and at small angles, where Primakoff is strongest. The azimuthal angle is flat, so the photon polarization becomes an important tool in discriminating against this background. 
 
-The cross section for this reaction on free protons is relatively large, about 140 nb/nucleon  for $0.3 < M_{\pi\pi} < 0.8$ GeV.\footnote{The cross section is estimated from the S-wave production of the $f0(500)$ meson extrapolated to small $-t$ from data archived in the {\em hepdata.net} database and reported in Ref.\,\cite{Battaglieri:2009aa}. See Appendix\,\ref{sec:NCsigma} for more information. A factor of one half is applied to the measured cross section for $\pi^+\pi^-$.} However, this process is strongly suppressed in nuclei by Pauli blocking and by pion absorption. The Pauli suppression is proportional to $1-G(t)$, where $G(t)$ is a nuclear form factor and has the limit of $G(t)\to1$ as $-t\to0$ \cite{Gevorkyan:2009ge,primex_inc}. In the case of single $\pi^0$ production, incoherent scattering contributes at the level of a couple of percent, and we expect it to be suppressed more strongly in $2\pi$ production. See Appendix\,\ref{sec:SigmaScaling} for details.
+The cross section for this reaction on free protons is relatively large, about 140 nb/nucleon  for $0.3 < M_{\pi\pi} < 0.8$ GeV.\footnote{The cross section is estimated from the S-wave production of the $f0(500)$ meson extrapolated to small $-t$ from data archived in the {\em hepdata.net} database and reported in Ref.\,\cite{Battaglieri:2009aa}. See Appendix\,\ref{sec:NCsigma} for more information. A factor of one half is applied to the measured cross section for $\pi^+\pi^-$.} However, this process is strongly suppressed in nuclei by Pauli blocking and by pion absorption. The Pauli suppression is proportional to $1-G(t)$, where $G(t)$ is a nuclear form factor and has the limit of $G(t)\to1$ as $-t\to0$ \cite{Gevorkyan:2009ge,primex_inc}. In the case of single $\pi^0$ production, incoherent scattering contributes at the level of a couple of percent, and we expect it to be suppressed more strongly in $2\pi$ production. See Appendix\,\ref{sec:SigmaScaling} for details. Therefore, we expect this background to be about six times smaller than what is used in the present signal extraction studies.
 
 \begin{figure}[tbp]
 \begin{center}
@@ -167,17 +177,9 @@ There may be important backgrounds that are mistaken for the signal due to miss-
 \end{enumerate}
 The first reaction is an inelastic, coherent process, and as such
 could produce a significant rate for a heavy nuclear target. The kinematics of $\eta$ production was investigated using the {\em genEtaRegge} event generator \cite{hdnote2437}. This event generator has a fairly realistic description of $\eta$ production on hydrogen, including a contribution from the Primakoff reaction. However, it is missing the enhancement provided from scattering off a heavy target. The $\eta$'s were generated with the standard event-generator parameters and were decayed according to their nominal branching fractions. The events were then processed as for the Primakoff signal through the GEANT4 MC and {\em mcsmear}. These steps were followed through the event filter that analyzed the events assuming they were signal, i.e.  $\gamma Pb \rightarrow Pb\, \pi^0 \pi^0$ and a kinematic fit was performed assuming the target was missing. Standard missing-mass and $\chi^2$ cuts were used to pick out events that mimicked the signal. The distributions of the accepted events are shown in Fig.\ref{fig:eta}. 
+We have scaled the event rate for $\eta$ production on lead using the scaling rules described in Appendix\,\ref{sec:SigmaScaling}, resulting in ten times the rate for Primakoff production of two pions ($\sim \Gamma_\eta\times Br(\eta \rightarrow \pi^0)/\Gamma_\sigma$).
 
-
-
-Rejecting 
-events that do not satisfy our elastic selection and the constraint that the four photons must reconstruct to two $\pi^0$'s mass should eliminate most of these events. 
-Additional gammas in the final state can also be used to suppress this
-background.  
-The second reaction is an incoherent process, and is
-small relative to coherent processes.  The Primex analysis showed that
-incoherent reactions generally peak at angles larger than about 1$^\circ$ and had a small effect on the extraction of the
-Primakoff $\pi^0$ cross sections. Likewise, we expect that incoherent processes to be a small issue for this experiment. The $\pi^0\pi^0$ momentum relative to the photon polarization plane does differentiate between Primakoff and incoherent production.
+We use a couple of very simple but powerful selection cuts to remove the $\eta$ background. The cuts include a selection on the missing mass squared ($|MM - M_{Pb}{^2}| < 0.1$ GeV$^2$) and a cut on the $\chi^2 < 5$ of the kinematic fit to $\gamma\,Pb\rightarrow \pi^0\pi^0 (Pb)$ with a missing recoil. In the analysis we also require that the $2\pi$ scattering angle ($\theta_{\pi\pi} <1.5$ degrees), which further restricts the range of missing mass. The result of these selections, which have been applied uniformly to signal and background, reduce the contamination from this source to about 16\% of the signal. Further selections are possible and 
 
  \begin{figure}[tbp]
 \begin{center}
