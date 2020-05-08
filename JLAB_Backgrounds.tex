@@ -50,10 +50,7 @@ are expected to be smaller than those for the single $\pi^0$ channel.
 
 
 
-We first classify the various backgrounds and then describe them in more detail one at a time.
-We note that two important backgrounds for the charged-pion polarizability experiment do not contribute in this experiment:
-First, coherent $\rho^0$ photo-production is absent in this
-experiment because the $\rho^0$ decay into the $\pi^0\pi^0$ channel is prohibited by I-spin conservation.  Second, $\mu^+\mu^-$ production is also not a factor for the neutral pion case.
+
 We have the following categories of backgrounds:
 \begin{itemize}
 \item Coherent production: In this case, the target remains intact. Generically, one may classify the two-pion production
@@ -173,13 +170,13 @@ Left) Two-pi mass. Center) Two-pi scattering angle. Right) Two-pi azimuthal angl
 There may be important backgrounds that are mistaken for the signal due to miss-identification. These may include
 \begin{enumerate}[label=(\roman*)]
     \item coherent production of $\eta$ followed by $\eta\rightarrow \pi^0\pi^0\pi^0 \rightarrow \gamma\gamma\gamma\gamma(\gamma\gamma)$, where only four photons are reconstructed.
-    \item production of nucleon resonances that contribute to the $\gamma N \rightarrow N \pi^0\pi^0$ final state.
+    \item production of nucleon resonances that contribute to the $\gamma N \rightarrow N \pi^0\pi^0$ final state. This contribution is expected to be small based on the experience of other Primakoff experiments.
 \end{enumerate}
 The first reaction is an inelastic, coherent process, and as such
 could produce a significant rate for a heavy nuclear target. The kinematics of $\eta$ production was investigated using the {\em genEtaRegge} event generator \cite{hdnote2437}. This event generator has a fairly realistic description of $\eta$ production on hydrogen, including a contribution from the Primakoff reaction. However, it is missing the enhancement provided from scattering off a heavy target. The $\eta$'s were generated with the standard event-generator parameters and were decayed according to their nominal branching fractions. The events were then processed as for the Primakoff signal through the GEANT4 MC and {\em mcsmear}. These steps were followed through the event filter that analyzed the events assuming they were signal, i.e.  $\gamma Pb \rightarrow Pb\, \pi^0 \pi^0$ and a kinematic fit was performed assuming the target was missing. Standard missing-mass and $\chi^2$ cuts were used to pick out events that mimicked the signal. The distributions of the accepted events are shown in Fig.\ref{fig:eta}. 
 We have scaled the event rate for $\eta$ production on lead using the scaling rules described in Appendix\,\ref{sec:SigmaScaling}, resulting in ten times the rate for Primakoff production of two pions ($\sim \Gamma_\eta\times Br(\eta \rightarrow \pi^0)/\Gamma_\sigma$).
 
-We use a couple of very simple but powerful selection cuts to remove the $\eta$ background. The cuts include a selection on the missing mass squared ($|MM - M_{Pb}{^2}| < 0.1$ GeV$^2$) and a cut on the $\chi^2 < 5$ of the kinematic fit to $\gamma\,Pb\rightarrow \pi^0\pi^0 (Pb)$ with a missing recoil. In the analysis we also require that the $2\pi$ scattering angle ($\theta_{\pi\pi} <1.5$ degrees), which further restricts the range of missing mass. The result of these selections, which have been applied uniformly to signal and background, reduce the contamination from this source to about 16\% of the signal. Further selections are possible and 
+We use a couple of very simple but powerful selection cuts to remove the $\eta$ background. The cuts include a selection on the missing mass squared ($|MM - M_{Pb}{^2}| < 0.1$ GeV$^2$) and a cut on the $\chi^2 < 5$ of the kinematic fit to $\gamma\,Pb\rightarrow \pi^0\pi^0 (Pb)$ with a missing recoil. In the analysis we also require a $2\pi$ scattering angle  ($\theta_{\pi\pi} <1.5$ degrees), which further restricts the range of missing mass. The result of these selections, which have been applied uniformly to signal and background, reduce the contamination from this source to about 16\% of the signal. These selections are illustrative and will allow us to achieve our experimental goals but further optimizations are likely. We note that the absolute number of mis-identified $\eta$'s in our signal region can be determined empirically from the measured rate of fully reconstructed $\eta\rightarrow\pi^0\pi^0\pi^0$ events.
 
  \begin{figure}[tbp]
 \begin{center}
@@ -188,32 +185,10 @@ We use a couple of very simple but powerful selection cuts to remove the $\eta$ 
 \caption{Kinematic distributions for the Primakoff signal and nuclear coherent background.
 Top left) Two-pi mass, Top right) Two-pi scattering angle, Bottom left) Two-pi azimuthal angle, 
 Bottom right) Polar angle of one pion in the $2\pi$ center-of-mass.
-\label{fig:decomposition_PrimNC}}
+\label{fig:decomposition_PrimNCICeta}}
 \end{center} 
 \end{figure}
 
+\subsection{Extraction of the Primakoff signal \label{sec:signalfit}}
+The Primakoff signal is determined using an amplitude fit\footnote{AmpTools, https://github.com/mashephe/AmpTools/wiki.} to all data simultaneously. It assumes that the mass and angular distributions are know for each of the contributions to the 2$\pi$ sample. A complex scaling factor is determined for each contribution by doing an unbinned maximum likelihood fit to the event sample. The result of such a fit to the sample that includes the Primakoff and nuclear coherent processes only is shown in  Fig.\,\ref{fig:decomposition_PrimNC}. The fit to the data sample that also includes both incoherent and broken $\eta$'s is shown in Fig.\,\ref{fig:decomposition_PrimNCICeta}. The three kinematic quantities that are most discriminating between the signal and background are the 2$\pi$ mass $M_{\pi\pi}$, the 2$\pi$ scattering angle $\theta_{\pi\pi}$ and the azimuthal angle $\phi_{\pi\pi}$. The fit uses all the kinematic information contained in the event sample to determine the signal and background components that are present. As demonstrated in the figure, a good fit is obtained to the data and Primakoff signal is determined. The statistical uncertainties as a function of $M_{\pi\pi}$ are obtained directly from the fit (Top left plot in Fig.\,\ref{fig:decomposition_PrimNCICeta}). We estimate the systematic uncertainty (3\%) in the extraction of the signal by varying the fraction of incoherent in the sample. 
 
-
-
-\subsection{Fits to the scattering angle}
-The Primakoff reaction is peaked at very small scattering angle $\theta_{\pi\pi} \sim m_{\pi\pi}^2 / 2E_\gamma^2 \sim 0.1-0.2^\circ$ for masses between 0.35 and 0.5 GeV, as shown in 
-Fig.\,\ref{fig:fit_Primakoff_sigma}a.  Nevertheless it is still an
-order-of-magnitude larger than the scattering angle for single $\pi^0$ production. The angular distribution for the nuclear coherent process on lead is shown in Fig.\,\ref{fig:fit_Primakoff_sigma}b, which 
-peaks at an angle of about $\theta_{\pi\pi} \sim 0.7^\circ$. The coherent sum of both processes, e.g. Fig.\,\ref{fig:fit_Primakoff_sigma}c and d, is a distribution that is considerably wider than the 
-Primakoff distribution alone, but a fit is required to determine the Primakoff signal. The amplitude of the NC component in Fig.\,\ref{fig:fit_Primakoff_sigma}d was generated with an amplitude that
-is twice that in Fig.\,\ref{fig:fit_Primakoff_sigma}c.  In order to extract the Primakoff component, we proceed as follows: We first parameterize the shapes of the Primakoff and
-NC components separately, as shown with the curves in Fig.\,\ref{fig:fit_Primakoff_sigma}a and b and the parameters for those shapes are fixed. Two distributions generated using both the Primakoff and
-NC amplitudes are shown in the bottom plots of Fig.\,\ref{fig:fit_Primakoff_sigma}c and d and then fit to the sum of the two distributions plus an interference term. We let the normalization of each
-component vary as well as the size of the interference term. The resulting fitted parameters are shown on the figures. From this exercise we conclude that the determination of 2000 signal Primakoff 
-events can be determined with a statistical uncertainty of about 5\%. 
-
- \begin{figure}[tbp]
-\begin{center}
-%\includegraphics[height=5cm,viewport=250 180 0 360,clip=true]{CPP_production3}
-\includegraphics[height=15cm,clip=true]{figures/fit_Primakoff_sigma.pdf}\
-\caption{ Angular distributions for a) Primakoff reaction only, b) Nuclear coherent reaction only, c) Sum of Primakoff and nuclear coherent, d) Same as c) with the nuclear coherent amplitude multiplied by 2.
-The curves represent fits to the coherent sum of the two components.
-\label{fig:fit_Primakoff_sigma}}
-\end{center} 
-\end{figure}
-   
