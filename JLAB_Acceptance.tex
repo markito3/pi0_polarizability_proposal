@@ -57,7 +57,7 @@ section.
 \begin{figure}[tph]
 \centering
 \includegraphics[page=3,width=4.75in]{figures/sigma_2pi0_figs.pdf}
-\caption{Estimated production rate  for $\gamma \rm{Pb}\rightarrow \pi^0\pi^0\,\rm{Pb}$ as a function 2$\pi$ mass. For this calculation, it is assumed the detector has perfect resolution and has a linearly increasing efficiency from zero at threshold up to 0.6 at 0.34 GeV (see top right of Fig.\,\ref{fig:twopi_primakoff_DSelect_p1_W_100000_sum} ).
+\caption{Estimated production rate  for $\gamma \rm{Pb}\rightarrow \pi^0\pi^0\,\rm{Pb}$ as a function 2$\pi$ mass. For this calculation, it is assumed the detector has perfect resolution and has a linearly increasing efficiency from zero at threshold up to 0.4 at 0.34 GeV (see top right of Fig.\,\ref{fig:twopi_primakoff_DSelect_p1_W_100000_sum} ).
 \label{fig:sigma_2pi0_figs_3}}
 \end{figure}
 
@@ -74,7 +74,8 @@ the microscope to cover the coherent peak, b) solid $^{208}$Pb at
 z=1cm, and c) Start counter removed. For the CPP experiment, the
 addition of muon identification chambers behind the FCAL is
 critical. However, for neutral pions this addition plays no role
-because the photons are detected in the FCAL. The GEANT3 simulation,\footnote{The event simulation has been updated to run with GEANT4 and yields similar results.}
+because the photons are detected in the FCAL. The GEANT4 simulation,\footnote{The initial simulations used GEANT3
+and show similar results.}
 which is used for these studies, includes most changes except for the
 addition of the muon chambers, which are not needed. In addition, the
 microscope geometry has not been modified and we use the tagger
@@ -93,8 +94,11 @@ The Primakoff signal was generated according to the cross section
 described in the previous chapter, using the
 \emph{gen\_2pi0\_primakoff}, which is a modified version of the CPP event generator. By default, the production amplitudes are
 symmetrized between the two identical $\pi^0$'s by AmpTools. One
-hundred thousand events were generated with $M_{\pi\pi}<$0.5 GeV and
-with no background, fed to GEANT3 to track particles, and subsequently
+hundred thousand events of Primakoff and nuclear coherent interactions 
+(see Section\,\ref{sec:NCback}) were generated with $M_{\pi\pi}<$0.9 GeV.
+We used random triggers from run 30401\footnote{Run 30401 is a low-intensity run for GlueX,
+but represents considerably higher background than expected for this experiment.} to add tagger accidentals 
+and random hits in the drift chambers. These events were fed to GEANT4 to track particles, and subsequently
 processed using \emph{mcsmear} to simulate the detector response. The
 simulated events were then analyzed using the GlueX event filter to
 analyze the reaction $\gamma Pb \rightarrow \pi^0 \pi^0$ with a
@@ -109,7 +113,7 @@ Fig.\,\ref{fig:EgP1P2_signal_DSelector}.
 \begin{figure}[tph]
 \centering
 \includegraphics[width=6in]{figures/EgP1P2_signal_DSelector.pdf}
-\caption{Left: Generated photon energies. Center: Reconstructed momentum distribution of one $\pi^0$. Right: Reconstructed momentum distribution of the second $\pi^0$.
+\caption{Left: Generated photon energies. The increased rate near 5.5 GeV is due to tagger accidentals. Center: Reconstructed momentum distribution of one $\pi^0$. Right: Reconstructed momentum distribution of the second $\pi^0$.
 \label{fig:EgP1P2_signal_DSelector}}
 \end{figure}
 The missing mass, 2$\pi$ mass and $-t$ distributions are shown in Fig.\,\ref{fig:MMMpipit_signal_DSelector}.
@@ -134,11 +138,11 @@ measure the asymmetry due to the photon beam polarization.
 \caption{Left: Difference between measured and generated momentum. Center: Difference between kinematically fit and generated momentum. The central peak has a width of about 2\%. Right: Difference between the kinematically fit azimuthal angle $\phi_{\pi\pi}$ and its generated value.
 \label{fig:DeltapDeltaPhi_signal_DSelector}}
 \end{figure}
-The resolution of the 2$\pi$ invariant mass is shown in Fig.\,\ref{fig:Resolution_Mpipittag_signal_DSelector}, along with the resolution of Mandelstam $-t$, and the reconstructed time resolution. The mass resolution is about 8\,MeV.
+The resolution of the 2$\pi$ invariant mass is shown in Fig.\,\ref{fig:Resolution_Mpipittag_signal_DSelector}, along with the resolution of Mandelstam $-t$, and the reconstructed time resolution. The mass resolution is about 12\,MeV.
 \begin{figure}[tph]
 \centering
 \includegraphics[width=6in]{figures/Resolution_Mpipittag_signal_DSelector.pdf}
-\caption{Left: Difference between kinematically fit and generated 2$\pi$ mass. The central 2$\pi$-mass $\sigma$ is about 8 MeV. Center: Difference between kinematically fit and generated -t. Right: Difference between kinematically fit and generated 2$\pi$ polar angle. The resolution $\sigma$ of the reconstructed angle is less than 0.1 degrees.
+\caption{Left: Difference between kinematically fit and generated 2$\pi$ mass. The central 2$\pi$-mass $\sigma$ is about 12 MeV. Center: Difference between kinematically fit and generated -t. Right: Difference between kinematically fit and generated 2$\pi$ polar angle. The resolution $\sigma$ of the reconstructed angle is 0.1 degrees.
 %Right: Timing resolution relative to the accelerator RF signal is about 0.35 ns.
 \label{fig:Resolution_Mpipittag_signal_DSelector}}
 \end{figure}
@@ -148,7 +152,21 @@ The Primakoff reaction will transfer all the energy of the beam into
 four photons, which are going forward. All this energy will be
 deposited in the FCAL, except for leakage down the beampipe. We expect
 a simple trigger with an energy threshold in the FCAL should have very
-high efficiency for any events that can be reconstructed.
+high efficiency for any events that can be reconstructed:
+the FCAL trigger with the total energy threshold around 1$\,$GeV can be used. To estimate trigger rate we used the same method as for TOF trigger rate \cite{TOFrate} extracted from the dedicated runs with high random trigger frequency. We used FCAL total energy greater than 1GeV deposited within 40$\,$ns excluding the most inner FCAL layer as a trigger condition. Fig.~\ref{fig:fcalrate} shows the values for LH2 and ''empty'' target configurations.
+Since the proposed lead target is 1.7 times thicker than LH2 target (in rad. lengths), we used ''empty'' target rate plus the difference between LH2 and ''empty'' target rates scaled with the factor of 1.7. That gives the value $\sim$9$\,$kHz for 20$\,$nA beam current.
+
+\begin{figure}[tph]
+\centering
+\includegraphics[width=3in]{figures/fcalrate_vs_beam.pdf}
+\caption{Estimated FCAL trigger rate for 1$\,$GeV
+total energy threshold for LH2 (solid squares) and ''empty'' (empty squares) targets.
+\label{fig:fcalrate}}
+\end{figure}
+
+
+
+
 
 The acceptance of the signal events can be determined by comparing the
 kinematically fit to the generated distributions. The generated and
@@ -158,16 +176,14 @@ Fig.\,\ref{fig:twopi_primakoff_DSelect_p1_W_100000_sum}. The
 reconstruction was described in the previous section.
 \begin{figure}[tph]
 \centering
-\includegraphics[width=6in]{figures/twopi_primakoff_DSelect_p1_W_100000_sum.pdf}
-\caption{Top left: Generated and kinematically fit 2$\pi$ mass distribution. Top right: Acceptance as a function of 2$\pi$ mass. Events above $M_{\pi\pi}>$0.5 GeV were eliminated from the analysis. The acceptance is about 60\%. Bottom left: Generated and kinematically fit azimuthal angle $\phi_{\pi\pi}$. Bottom right: Generated and kinematically fit $-t$ distribution. There is significant slewing of the measured distribution to large $-t$.}
+\includegraphics[width=6in]{figures/twopi_primakoff_DSelect_test_File_100000_sum_PrimNC.pdf}
+\caption{Top left: Generated and kinematically fit (accepted) 2$\pi$-mass distribution. Top right: Acceptance as a function of 2$\pi$ mass. The acceptance is about 40\% at threshold. Bottom left: Generated and kinematically fit azimuthal angle $\phi_{\pi\pi}$. Bottom right: Generated and kinematically fit $-t$ distribution. }
 \label{fig:twopi_primakoff_DSelect_p1_W_100000_sum}
 \end{figure}
-The acceptance is quite high at about 60\%. However, there is also
+The acceptance is quite high at about 40\%. However, there is also
 significant slewing due to resolution in most variables of
-interest. The main effect of resolution in the 2$\pi$ mass happens at
-threshold and the distortions above that are not very great. The
+interest.  The
 relatively poor resolution in $\phi_{\pi\pi}$ results in dilution of
 the measured azimuthal dependence, which will need to be adjusted
-based on simulation. Finally the $-t$ resolution softens the measured
-t-slope due to the smearing of high rate regions down to low rate
+based on simulation. Finally the measured $-t$ resolution roughly reproduces the generated slope despite the smearing of high rate regions down to low rate
 regions.
