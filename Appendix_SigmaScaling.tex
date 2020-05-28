@@ -27,12 +27,12 @@ The angular dependence of the Primakoff differential cross section for single an
 $$ {d\sigma \over d \Omega} \sim {sin^2 \theta \over Q^4}|F(Q^2)|^2$$
 It can be shown (see notes from R. Miskimen) that the peak of the Primakoff differential cross section is at the angle,
 $$ \theta_{max}={s \over 2 E^2_\gamma}$$
-where s is the invariant mass of the $\pi$ or $\pi \pi$ system.  
+where s is the invariant mass of the $\pi$ or $\pi \pi$ system.  The factor $|F(Q^2)|^2$ has a negligible effect on the position of the peak. 
 
 The total cross section is given by the integral
 
 $$ \sigma \sim \int^{C\theta_{max}}_0 {sin^2 \theta \over Q^4}|F(Q^2)|^2 2 \pi sin \theta d\theta$$
-and \it C \rm is a dimensionless scale factor. Working in the small angle limit the total cross section is,
+where \it C \rm is a dimensionless scale factor. Working in the small angle limit the total cross section is,
 $$\sigma \sim 2\pi \int^{C\theta_{max}}_0 
 {\theta^3 \over \left( {s^2 \over 4E^2_\gamma}+ E^2_\gamma \theta^2  \right)^2} 
 \Big[ 1-{1 \over 6}<r^2>_{charge}\left( {s^2 \over 4E^2_\gamma}+ E^2_\gamma \theta^2  \right)\Big]^2
@@ -46,7 +46,7 @@ $$ \sigma \sim {\pi \over E^4_\gamma}
 \left[ \Big( ln(1+C^2)-{C^2 \over 1+C^2}  \Big)
 - {1 \over 12}<r^2>_{charge}{s^2 \over E^2_\gamma}
 \Big(C^2-ln(1+C^2 \Big) \right]$$
-For C=4 the term on the left within the brackets sums to +1.89, and the term on the right and proportional to $<r^2>$ sums to -0.008 (-.61) for the $\pi (\pi \pi)$ final state.  Then the ratio of integrals for double pion to single pion Primakoff production is approximately $I_{\pi\pi} / I_{\pi} \approx 0.68$
+For C=4 the term on the left within the brackets sums to +1.89, and the term on the right ( proportional to $<r^2>$) sums to -0.008 (-.61) for the $\pi (\pi \pi)$ final state.  Then the ratio of integrals for double pion to single pion Primakoff production is approximately $I_{\pi\pi} / I_{\pi} \approx 0.68$
 The total cross section is approximately proportional to $1/E^4_\gamma$, nearly canceling the E$^4_\gamma$ factor in the Primakoff equations, and leading to the result that the total cross section is approximately independent of incident photon energy.   
 
 
@@ -78,29 +78,25 @@ where $d^2\sigma_{\gamma \rightarrow N\pi^0 \pi^0} / dt dM_{\pi \pi}$ is the $\p
   $$ {d\sigma_{\gamma N \rightarrow N X} \over dt} = \sigma_0 e^{-kt}$$
   the coherent angular distribution is given by
   $$ { d\sigma_{coherent} \over d\Omega} = \sigma_0 sin^2 \theta |F(t)|^2 e^{-kt} {dt \over d\Omega}$$ 
-  Using approximations valid for CPP and NPP, 
+  For CPP and NPP we have, 
   $$ {2k \over <r^2>_{matter}}<<1 $$
   and 
   $${1 \over 6}<r^2>_{matter} {s^2 \over 4E^2_\gamma}<<1$$
-  then to leading order in $\theta^2$ the peak coherent cross section is at an angle 
+   To leading order in $\theta^2$ the peak coherent cross section is at angle 
 $$ \theta_{max}={1 \over E_\gamma}\sqrt{ 2 
  \over <r^2>_{matter} } $$
- where s is the invariant mass squared of the $\pi$ or $\pi \pi$ system. 
+ . 
  
   The total cross section is given by, 
-  $$ \sigma_{coherent} \sim \sigma_0 \int^{t_{max}}_{s^2/4E^2_{\gamma}} sin^2 \theta |F(t)|^2 e^{-kt} dt$$ 
-  where $s^2/4E^2_\gamma$ is the minimum t in the reaction. 
-  Working in the small angle approximation
-  gives, 
-  $$ \sigma_{coherent} \sim {\sigma_0 \over E^2_\gamma}
-  e^{-ks^2/4E^2_\gamma} \int^{t_{max}}_0 t | F(t+{s^2 \over 4 E^2_\gamma})|^2 e^{-kt}dt  $$ 
- For CPP and NPP we have,
+  $$ \sigma_{coherent} \sim \sigma_0 \int^{C\theta_{max}}_0 sin^2 \theta |F(t)|^2 e^{-kt} {dt \over d\Omega} 2\pi sin\theta d\theta$$ 
+  where C is a dimensionless scale parameter. Working in the small angle approximation
+  and using the condition, 
  $$k\big( {s^2 \over 4 E^2_\gamma} \big) <<1$$
- allowing us to reduce the total cross section  to this form, 
-  $$ \sigma_{coherent} \sim {\sigma_0 \over E^2_\gamma}
-  \int^{t_{max}}_0 t | F(t)|^2 dt  $$ 
-  Therefore the cross section integral depends only on t$_{max}$, and cancels out in taking the ratio
-  $\sigma_{\gamma A \rightarrow A \pi^0 \pi^0}   \Big/  \sigma_{\gamma A \rightarrow A \pi^0} $, provided the same upper limit t$_{max}$ is used. 
+ we can reduce the total cross section  to this form, 
+  $$ \sigma_{coherent} \sim {8\sigma_0 \over <r^2_{charge}>^2E^2_\gamma}
+  \int^C_0 y^3 \Big[1- {1 \over 3} y^2 \Big]^2 dy  $$ 
+  Since the integral depends only on C, the integral cancels out in taking the ratio
+  $\sigma_{\gamma A \rightarrow A \pi^0 \pi^0}   \Big/  \sigma_{\gamma A \rightarrow A \pi^0} $. 
   
   Here we give our final result for the ratio of  $\pi^0 \pi^0$ to $\pi^0$  coherent cross sections:
 
@@ -112,18 +108,20 @@ $$  \sigma_{\gamma A \rightarrow A \pi^0 \pi^0}   \Big/  \sigma_{\gamma A \right
 The incoherent cross section for  $\pi^0$ photo-production is given by: 
 
 $$ {d\sigma_{\gamma A \rightarrow   \pi^0 } \over dt } \approx \eta A \Big(1 -G(t) \Big){ d\sigma_{\gamma N \rightarrow N \pi^0 } \over dt } $$
-where G(t) is a Pauli suppression factor, with G(0)=1 and $G(t)\rightarrow 0$ for $t> k_F$, where $k_F\approx 260$ MeV/c is the nuclear Fermi momentum. The incoherent cross section for  $\pi^0 \pi^0$ photo-production has a similar form: 
+where G(t) is a Pauli suppression factor, with G(0)=1 and $G(t)\rightarrow 0$ for $t> k_F$, where $k_F$ is the nuclear Fermi momentum, $k_F\approx 260$ MeV/c. The incoherent cross section for  $\pi^0 \pi^0$ photo-production has a similar form: 
 $$ {d\sigma_{\gamma A \rightarrow   \pi^0 \pi^0 } \over dt } \approx \eta^2 A \Big(1 -G(t) \Big){ d^2\sigma_{\gamma N \rightarrow N \pi^0 \pi^0 } \over dt dM_{\pi \pi}} \Delta M_{\pi \pi} $$
+The photo-production cross sections on the nuclon are identical to those used in the estimation of the coherent cross section.   
 
-The nucleon photo-production cross sections are identical to those used in the estimation of the coherent cross section.   The total cross section is given by, 
-$$\sigma \sim \sigma_0 \int^{Ct_{max}}_{s^2/4E^2_\gamma} ( 1 - G(t) ) e^{-kt} dt $$
-where we integrate up to a multiple of $t_{max} = (E_\gamma \theta_{max})^2$, and $\theta_{max}$  is the angle where the coherent cross section peaks.   Because $s^2/4E^2_\gamma << k^2_F$ and $1-G(s^2/4E^2_\gamma) \approx 0$, the lower limit on the integral can be replaced with zero, 
-$$\sigma \sim \int^{C\theta_{max}}_0 ( 1 - G(t) ) e^{-kt}  dt $$
-Note that for $\pi$ or $\pi \pi$ production 
-$$ k C t_{max} \approx k C { 2 \over <r^2>_{matter} }  << 1 $$
+The total cross section is given by, 
+$$\sigma \sim \sigma_0 \int^{C E^2_\gamma \theta^2_{max}}_{s^2/4E^2_\gamma} \Big( 1 - G(t) \Big) e^{-kt} dt  $$
+where we integrate up to a multiple of $E_\gamma^2 \theta_{max}^2$, where $\theta_{max}$  is the angle of the peak coherent cross section, and $s^2/4E^2_\gamma$ is the minimum t in the reaction.  
+Because $s^2/4E^2_\gamma << k^2_F$ and $1-G(s^2/4E^2_\gamma) \approx 0$, the lower limit on the integral can be replaced with zero, 
+$$\sigma \sim \int^{CE^2_\gamma \theta^2_{max}}_0 \Big( 1 - G(t) \Big) e^{-kt}  dt $$
+For $\pi$ or $\pi \pi$ photo-production 
+$$ C  E^2_\gamma \theta^2_{max} k \approx C  { 2 \over <r^2>_{matter} } k << 1 $$
 provided that $C \le 5$. In this case we can neglect the exponential in the integral, 
-$$\sigma \sim \int^{C t_{max}}_0 ( 1 - G(t) ) dt $$
-The integral depends only on the upper integration limit,   and cancels out in taking the ratio $ \sigma_{\gamma A \rightarrow  \pi^0 \pi^0}  \Big/ \sigma_{\gamma A \rightarrow  \pi^0} $, provided the same integration limit is used. 
+$$\sigma \sim \int^{C E^2_\gamma \theta^2_{max}}_0 \Big( 1 - G(t) \Big) dt $$
+Since the integral depends only on the upper integration limit,   the integral  cancels out in taking the ratio $ \sigma_{\gamma A \rightarrow  \pi^0 \pi^0}  \Big/ \sigma_{\gamma A \rightarrow  \pi^0} $. 
 Our final result for the ratio of  $\pi^0 \pi^0$ to $\pi^0$ incoherent cross sections is given by: 
 
 $$  \sigma_{\gamma A \rightarrow  \pi^0 \pi^0}  \Big/ \sigma_{\gamma A \rightarrow  \pi^0}  \approx \eta 
