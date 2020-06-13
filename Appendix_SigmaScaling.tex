@@ -31,33 +31,47 @@ where s is the invariant mass squared of the $\pi$ or $\pi \pi$ system.
 
 The total cross section is given by the integral
 
-$$ \sigma \sim \int^{C\theta_{max}}_0 {sin^2 \theta \over Q^4}|F(Q^2)|^2 2 \pi sin \theta d\theta$$
-where \it C \rm is a dimensionless scale factor. Working in the small angle limit the total cross section is,
-$$\sigma \sim 2\pi \int^{C\theta_{max}}_0 
+$$ \sigma \sim \int^\Theta_0 {sin^2 \theta \over Q^4}|F(Q^2)|^2 2 \pi sin \theta d\theta$$
+where $\Theta$ is the upper integration limit. Working in the small angle limit the total cross section is,
+$$\sigma \sim 2\pi \int^\Theta_0 
 {\theta^3 \over \left( {s^2 \over 4E^2_\gamma}+ E^2_\gamma \theta^2  \right)^2} 
-\Big[ 1-{1 \over 6}<r^2>_{charge}\left( {s^2 \over 4E^2_\gamma}+ E^2_\gamma \theta^2  \right)\Big]^2
+\Big[ 1-{1 \over 6}<r^2>_{charge}\left( {s^2 \over 4E^2_\gamma}+ E^2_\gamma \theta^2  \right) +... \Big]^2
 d \theta$$
-$$\sigma \sim 2\pi \int^{C\theta_{max}}_0 
+$$\sigma \sim 2\pi \int^\Theta_0 
 {\theta^3 \over \left( {s^2 \over 4E^2_\gamma}+ E^2_\gamma \theta^2  \right)^2} 
-\Big[ 1-{1 \over 3}<r^2>_{charge}\left( {s^2 \over 4E^2_\gamma}+ E^2_\gamma \theta^2  \right)\Big]
+\Big[ 1-{1 \over 3}<r^2>_{charge}\left( {s^2 \over 4E^2_\gamma}+ E^2_\gamma \theta^2  \right) \Big]
 d \theta$$
-Making a change of variable and performing the integration leads to the result, 
+Setting $\Theta = C\theta_{max}$ the integral can be evaluated giving, 
 $$ \sigma \sim {\pi \over E^4_\gamma}
 \left[ \Big( ln(1+C^2)-{C^2 \over 1+C^2}  \Big)
-- {1 \over 12}<r^2>_{charge}{s^2 \over E^2_\gamma}
-\Big(C^2-ln(1+C^2 \Big) \right]$$
-For C=4 the term on the left within the brackets sums to +1.89, and the term on the right ( proportional to $<r^2>$) sums to -0.008 (-.61) for the $\pi (\pi \pi)$ final state.  Then the ratio of integrals for double pion to single pion Primakoff production is approximately $I_{\pi\pi} / I_{\pi} \approx 0.68$
-The total cross section is approximately proportional to $1/E^4_\gamma$, nearly canceling the E$^4_\gamma$ factor in the Primakoff equations, and leading to the result that the total cross section is approximately independent of incident photon energy.   
+- {s^2 \over 4 E^2_\gamma}  { <r^2_{charge}> \over 3} 
+\Big(C^2 - ln(1+C^2) \Big) \right]$$
 
+The integrand in the integral goes through zero at
+$$\theta_{min} \approx {1 \over E_\gamma}\sqrt{3 \over <r^2>_{charge}}$$
+provded that,
+$$ {1 \over 3} <r^2>_{charge}{s^2 \over 4 E^2_\gamma} << 1$$
+which is valid for CPP and NPP. The angle $\theta_{min}$ is approximately the first minimum of the nuclear charge form factor. 
+Setting the upper limit of integration to  $\Theta = C \theta_{max} = \theta_{min}$ gives 
+$$C= {2 E_\gamma  \over s}\sqrt{3 \over <r^2>_{charge}}$$
 
-Our final result for the ratio of Primakoff cross sections $\sigma_{\pi^0 \pi^0}$ to $ \sigma_{\pi^0}$ is given by, 
-$$  \sigma_{\pi^0 \pi^0}   \Big/ \sigma_{ \pi^0}   
+$$ \sigma \sim {\pi \over E^4_\gamma}
+\left[ \Big( ln(1+C^2)-{C^2 \over 1+C^2}  \Big)
+- 
+\Big(1 - {1 \over C^2} ln(1+C^2) \Big) \right]$$
+The $1/E^4_\gamma$ factor cancels the $E^4_\gamma$ in the Primakoff equation, and therefore the energy dependence of the integrated cross section is relatively weak, given by the dependence of the above equation on  $E_\gamma \sim C$.  
+
+For the $\pi \pi (\pi)$ final state C = 4.7 (40.8), and the ratio of integrals for double pion to single pion Primakoff production is approximately $I_{\pi\pi} / I_{\pi} \approx 0.24$
+The final result for the ratio of Primakoff cross sections $\sigma_{\pi^0 \pi^0}$ to $ \sigma_{\pi^0}$ is given by, 
+\begin{eqnarray}
+\sigma_{\pi^0 \pi^0}   \Big/ \sigma_{ \pi^0}   
 \approx 
 \Big(\Gamma_{\pi^0 \pi^0 \rightarrow \gamma \gamma}
 \Big/ \Gamma_{\gamma \gamma} \Big)
 \times \Big( M_\pi \Big/ 
 M_{\pi \pi}\Big)^3\times \Big( I_{\pi \pi} \Big/ I_\pi \Big)
-\approx 0.14$$
+\approx 0.050  \label{eq:sigpipi_over_sigpi}
+\end{eqnarray}
 
 
 
@@ -82,10 +96,10 @@ where $d^2\sigma_{\gamma \rightarrow N\pi^0 \pi^0} / dt dM_{\pi \pi}$ is the $\p
   $$ {2k \over <r^2>_{matter}}<<1 $$
   and 
   $${1 \over 6}<r^2>_{matter} {s^2 \over 4E^2_\gamma}<<1$$
-   To leading order in $\theta^2$ the peak coherent cross section is at angle 
+   Then to leading order in $\theta^2$ the peak coherent cross section is at angle 
 $$ \theta_{max}={1 \over E_\gamma}\sqrt{ 2 
  \over <r^2>_{matter} } $$
- . 
+ 
  
   The total cross section is given by, 
   $$ \sigma_{coherent} \sim \sigma_0 \int^{C\theta_{max}}_0 sin^2 \theta |F(t)|^2 e^{-kt} {dt \over d\Omega} 2\pi sin\theta d\theta$$ 
@@ -128,8 +142,8 @@ $$  \sigma_{\gamma A \rightarrow  \pi^0 \pi^0}  \Big/ \sigma_{\gamma A \rightarr
  {d^2\sigma_{\gamma N \rightarrow N \pi^0 \pi^0} \over dt dM_{\pi \pi} }  \Delta M_{\pi \pi}\Big/ { d\sigma_{\gamma N \rightarrow N \pi^0} \over dt} \approx 0.07 $$
 
 \subsection{Summary}
-NPP will take data on the same target, $^{208}$Pb, and the same approximate incident beam energy, $\approx 6$ GeV, as PrimEx. Using known analytical expressions for the Primakoff, nuclear coherent, and nuclear incoherent cross sections, known photo-nuclear cross sections, and estimates for nuclear attenuation from the PrimEx $^{208}$Pb analysis, numerical factors are calculated to scale the total cross sections seen in PrimEx to the 
-conditions for NPP.  Assuming $M_{\pi^0 \pi^0} \approx 0.4$ GeV, and a width  $\Delta M_{\pi^0 \pi^0} \approx 0.4$ GeV, the scale factors for Primakoff, nuclear coherent, and nuclear incoherent total cross sections are approximately $\times 0.14$, $\times 0.07$, and $\times 0.07$, respectively. 
+NPP will take data on the same target, $^{208}$Pb, and the same approximate incident beam energy, $\approx 6$ GeV, as PrimEx. Using known analytical expressions for the Primakoff, nuclear coherent, and nuclear incoherent cross sections, known photo-nuclear cross sections, and estimates for nuclear attenuation from the PrimEx $^{208}$Pb analysis, numerical factors are calculated for scaling the total cross sections seen in PrimEx to the 
+conditions for NPP.  Assuming $M_{\pi^0 \pi^0} \approx 0.4$ GeV, and a width  $\Delta M_{\pi^0 \pi^0} \approx 0.4$ GeV, the scale factors for Primakoff, nuclear coherent, and nuclear incoherent total cross sections are approximately $\times 0.05$, $\times 0.07$, and $\times 0.07$, respectively. 
 
 \begin{figure}
 \centering
