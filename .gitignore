@@ -10,3 +10,4 @@ texput.log
 .aux_for_bibtex
 Pi0Polarizability.out
 Pi0Polarizability.toc
+*.tmp
