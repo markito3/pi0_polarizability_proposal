@@ -2,7 +2,7 @@
 In order to estimate rates, resolution and acceptance due to the
 Primakoff reaction on lead, $\gamma ^{208}\rm{Pb}\rightarrow \pi^0
 \pi^0\, \rm{Pb}$, we take the reaction process to be the same as for
-charged pion production and given in Eq. 8 of the Proposal for the
+charged pion production and given in Eq.~8 of the Proposal for the
 Charged Pion Polarizability experiment \cite{CPPexp}, which is
 reproduced here for convenience:
 \begin{eqnarray}
@@ -16,7 +16,7 @@ emission of the $\pi\pi$ system, $W_{\pi\pi}$ is the $\pi\pi$
 invariant mass, Z is the atomic number of the target, $\beta$ is the
 velocity of the $\pi\pi$ system, $E_\gamma$ is the energy of the
 incident photon, $F(Q^2)$ is the electromagnetic form factor for the
-target with final-state-interactions (FSI) corrections applied,
+target with final-state-interaction (FSI) corrections applied,
 $\theta_{\pi\pi}$ is the lab angle for the $\pi\pi$ system,
 $\phi_{\pi\pi}$ is the azimuthal angle of the $\pi\pi$ system relative
 to the incident photon polarization, and $P_\gamma$ is the incident
@@ -36,22 +36,26 @@ been measured by the Crystal Ball Collaboration
 \cite{Marsiske:1990hx}, albeit with limited statistical precision. We
 have parameterized the cross section for $W_{\pi\pi}<0.8$ GeV, which
 is of specific interest to this program as shown in
-Fig.\ref{fig:sigma_2pi0_figs_1}. Using this parameterization and
-Eq.\ref{eq:PrimakoffSignal}, we can calculate the photoproduction
+Fig.~\ref{fig:sigma_2pi0_figs_1}. Using this parameterization and
+Eq.~\ref{eq:PrimakoffSignal}, we can calculate the photoproduction
 cross section on lead, which is shown in
-Fig.\ref{fig:sigma_2pi0_figs_2}.
+Fig.~\ref{fig:sigma_2pi0_figs_2}.
 \begin{figure}[tph]
 \centering
 \includegraphics[page=2,width=4.75in]{figures/sigma_2pi0_figs.pdf}
 \caption{Primakoff cross section for $\gamma Pb \rightarrow Pb\, \pi^0 \pi^0$ using the parameterization of  $\sigma(\gamma\gamma\rightarrow \pi^0\pi^0)$ in the previous figure. The integrated cross section is 0.3\,$\mu$b/nucleus.
 \label{fig:sigma_2pi0_figs_2}}
 \end{figure}
-The integrated cross section is 0.30\,$\pm0.05\mu$b/nucleus. The uncertainty comes from the model dependence and was obtained by comparing two different calculations using completely different parameterizations for the nuclear form factor on lead, $F(Q^2)$. For reference,
+The integrated cross section is $0.30 \pm 0.05~\mu$b/nucleus. The
+uncertainty comes from the model dependence and was obtained by
+comparing two different calculations using completely different
+parameterizations for the nuclear form factor on lead, $F(Q^2)$. For
+reference,
 we note that the cross section for charged pions $(\pi^+\pi^-$)
 production is 10.9\,$\mu$b, a factor of 30 larger.
 
 The number of neutral-pion-Primakoff-signal events produced during 20
-PAC days is shown in Fig.\ref{fig:sigma_2pi0_figs_3}. The impacts of
+PAC days is shown in Fig.~\ref{fig:sigma_2pi0_figs_3}. The impacts of
 detector trigger, acceptance and resolution are discussed in the next
 section.
 \begin{figure}[tph]
@@ -66,7 +70,7 @@ section.
 The response of the GlueX detector to neutral pion Primakoff events
 was simulated using the standard GlueX generation and reconstruction
 tools, but with the specific geometry for the CPP experiment. The schematic of the detector configuration is shown in
-Fig.\,\ref{fig:GlueX_cpp}. The primary differences between the
+Fig.~\ref{fig:GlueX_cpp}. The primary differences between the
 standard GlueX geometry and CPP are summarized in
 Table\,\ref{tab:ccp_config}. For this experiment, the main differences
 include a) coherent peak position at 5.5-6 GeV and re-positioning of
@@ -79,9 +83,9 @@ and show similar results.}
 which is used for these studies, includes most changes except for the
 addition of the muon chambers, which are not needed. In addition, the
 microscope geometry has not been modified and we use the tagger
-hodoscope for that region in the simulation. The slightly reduced
+hodoscope for the region of interest in the simulation. The slightly reduced
 energy of the hodoscope relative to the microscope has little impact
-and the gaps between counters is ignored by simulating the tagged
+and the gaps between counters are ignored when simulating the tagged
 flux.
 \begin{figure}[h!]
 \centering
@@ -92,7 +96,7 @@ flux.
 
 The Primakoff signal was generated according to the cross section
 described in the previous chapter, using the
-\emph{gen\_2pi0\_primakoff}, which is a modified version of the CPP event generator. By default, the production amplitudes are
+\emph{gen\_2pi0\_primakoff} program, which is a modified version of the CPP event generator. By default, the production amplitudes are
 symmetrized between the two identical $\pi^0$'s by AmpTools. One
 hundred thousand events of Primakoff and nuclear coherent interactions 
 (see Section\,\ref{sec:NCback}) were generated with $M_{\pi\pi}<$0.9 GeV.
@@ -102,31 +106,31 @@ and random hits in the drift chambers. These events were fed to GEANT4 to track 
 processed using \emph{mcsmear} to simulate the detector response. The
 simulated events were then analyzed using the GlueX event filter to
 analyze the reaction $\gamma Pb \rightarrow \pi^0 \pi^0$ with a
-missing Pb nucleus and constraining the detected photon pairs to the
-$\pi^0$ mass. Energy and momentum conservation is imposed on the reaction as well as the requirement that all photons originate from a common vertex (i.e. ``vertex-P4''). The output of the reconstruction, both kinematically
+missing Pb nucleus and to constrain the detected photon pairs to the
+$\pi^0$ mass. Energy and momentum conservation is imposed on the reaction as well as the requirement that all photons originate from a common vertex. The output of the reconstruction, both kinematically
 fit and ``measured" quantities, were available for inspection.
 
 In the following we show various reconstructed quantities as well as
 estimated resolutions. The distribution of generated photon energy and
 the unconstrained reconstructed momenta of the two pions are shown in
-Fig.\,\ref{fig:EgP1P2_signal_DSelector}.
+Fig.~\ref{fig:EgP1P2_signal_DSelector}.
 \begin{figure}[tph]
 \centering
 \includegraphics[width=6in]{figures/EgP1P2_signal_DSelector.pdf}
 \caption{Left: Generated photon energies. The increased rate near 5.5 GeV is due to tagger accidentals. Center: Reconstructed momentum distribution of one $\pi^0$. Right: Reconstructed momentum distribution of the second $\pi^0$.
 \label{fig:EgP1P2_signal_DSelector}}
 \end{figure}
-The missing mass, 2$\pi$ mass and $-t$ distributions are shown in Fig.\,\ref{fig:MMMpipit_signal_DSelector}.
+The missing mass, 2$\pi$ mass and $-t$ distributions are shown in Fig.~\ref{fig:MMMpipit_signal_DSelector}.
 \begin{figure}[tph]
 \centering
 \includegraphics[width=6in]{figures/MMMpipit_signal_DSelector.pdf}
-\caption{Left: Missing mass distribution minus the mass of the recoil nucleus. Center: Kinematically fit $2\pi$ mass distribution. Right: Kinematically fit -t distribution.
+\caption{Left: Missing mass distribution minus the mass of the recoil nucleus. Center: Kinematically fit $2\pi$ mass distribution. Right: Kinematically fit $-t$ distribution.
 \label{fig:MMMpipit_signal_DSelector}}
 \end{figure}
 The reconstructed momentum relative to its generated value is shown in
-Fig.\ref{fig:DeltapDeltaPhi_signal_DSelector}. The central peak of the
-kinematicall fit momentum is about 2\%, similar to that for charged
-pions. However, there are long uniform tails that will effect the
+Fig.~\ref{fig:DeltapDeltaPhi_signal_DSelector}. The central peak of the
+kinematically fit momentum is about 2\%, similar to that for charged
+pions. However, there are long tails that will effect the
 final reconstruction. The resolution of the azimuthal angle,
 $\phi_{\pi\pi}$, between the production and the photon polarization
 planes is quite poor owing to the fact that the pion pairs are
@@ -138,7 +142,7 @@ measure the asymmetry due to the photon beam polarization.
 \caption{Left: Difference between measured and generated momentum. Center: Difference between kinematically fit and generated momentum. The central peak has a width of about 2\%. Right: Difference between the kinematically fit azimuthal angle $\phi_{\pi\pi}$ and its generated value.
 \label{fig:DeltapDeltaPhi_signal_DSelector}}
 \end{figure}
-The resolution of the 2$\pi$ invariant mass is shown in Fig.\,\ref{fig:Resolution_Mpipittag_signal_DSelector}, along with the resolution of Mandelstam $-t$, and the reconstructed time resolution. The mass resolution is about 12\,MeV.
+The resolution of the 2$\pi$ invariant mass is shown in Fig.~\ref{fig:Resolution_Mpipittag_signal_DSelector}, along with the resolution of Mandelstam $-t$, and the reconstructed time resolution. The mass resolution is about 12~MeV.
 \begin{figure}[tph]
 \centering
 \includegraphics[width=6in]{figures/Resolution_Mpipittag_signal_DSelector.pdf}
