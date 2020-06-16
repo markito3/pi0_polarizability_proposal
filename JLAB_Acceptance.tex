@@ -152,32 +152,49 @@ The resolution of the 2$\pi$ invariant mass is shown in Fig.~\ref{fig:Resolution
 \end{figure}
 
 \subsection{Trigger and acceptance}
-The Primakoff reaction will transfer all the energy of the beam into
-four photons, which are going forward. All this energy will be
-deposited in the FCAL, except for leakage down the beampipe. We expect
-a simple trigger with an energy threshold in the FCAL should have very
-high efficiency for any events that can be reconstructed:
-the FCAL trigger with the total energy threshold around 1$\,$GeV can be used. To estimate trigger rate we used the same method as for TOF trigger rate \cite{TOFrate} extracted from the dedicated runs with high random trigger frequency. We used FCAL total energy greater than 1GeV deposited within 40$\,$ns excluding the most inner FCAL layer as a trigger condition. Fig.~\ref{fig:fcalrate} shows the values for LH2 and ``empty'' target configurations.
-Since the proposed lead target is 1.7 times thicker than LH2 target (in rad. lengths), we used ``empty'' target rate plus the difference between LH2 and ``empty'' target rates scaled with the factor of 1.7. That gives the value $\sim$9$\,$kHz for 20$\,$nA beam current.
+The Primakoff reaction will transfer nearly all the energy of the beam
+into four photons, which are going forward. Most of this energy will
+be deposited in the FCAL, except for leakage down the beampipe and a
+small amount into the BCAL for some events. We expect a simple trigger
+with an energy threshold in the FCAL should have very high efficiency
+for any events that can be reconstructed: the FCAL trigger with a
+total energy threshold around 1~GeV can be used. To estimate trigger
+rate we used the same method as for the time-of-flight trigger rate
+study for CPP \cite{TOFrate} with data extracted from dedicated runs
+with a high rate random trigger. We used a trigger threshold of FCAL
+total energy greater than 1~GeV deposited within a 40~ns time window
+excluding the innermost FCAL layer.  Fig.~\ref{fig:fcalrate} shows the
+values for LH2 and empty target configurations.  Since the proposed
+lead target is 1.7 times thicker than the LH2 target (in radiation
+lengths), we used the empty target rate plus the difference between
+LH2 and empty target rates scaled by a factor of 1.7. That gives a
+trigger rate of 9~kHz for 20~nA of beam current.
 
 \begin{figure}[tph]
 \centering
 \includegraphics[width=3in]{figures/fcalrate_vs_beam.pdf}
-\caption{Estimated FCAL trigger rate for 1$\,$GeV
-total energy threshold for LH2 (solid squares) and ``empty'' (empty squares) targets.
+\caption{Estimated FCAL trigger rate for a 1~GeV
+  total energy threshold for LH2 (solid squares) and empty
+  (empty squares) targets.
 \label{fig:fcalrate}}
 \end{figure}
 
-The acceptance of the signal events can be determined by comparing the
-kinematically fit to the generated distributions. The generated and
+The acceptance of the signal events can be determined by comparing
+distributions of quantities obtained from kinematic fits to those
+that were generated. The generated and
 kinematically fit 2$\pi$ mass, $\phi_{\pi\pi}$ and $-t$ distributions
 are shown in
-Fig.\,\ref{fig:twopi_primakoff_DSelect_p1_W_100000_sum}. The
+Fig.~\ref{fig:twopi_primakoff_DSelect_p1_W_100000_sum}. The
 reconstruction was described in the previous section.
 \begin{figure}[tph]
 \centering
 \includegraphics[width=6in]{figures/twopi_primakoff_DSelect_test_File_100000_sum_PrimNC.pdf}
-\caption{Top left: Generated and kinematically fit (accepted) 2$\pi$-mass distribution. Top right: Acceptance as a function of 2$\pi$ mass. The acceptance is about 40\% at threshold. Bottom left: Generated and kinematically fit azimuthal angle $\phi_{\pi\pi}$. Bottom right: Generated and kinematically fit $-t$ distribution. }
+\caption{Top left: Generated and kinematically fit (accepted)
+  2$\pi$-mass distribution. Top right: Acceptance as a function of
+  2$\pi$ mass. The acceptance is about 40\% at threshold. Bottom left:
+  Generated and kinematically fit azimuthal angle
+  $\phi_{\pi\pi}$. Bottom right: Generated and kinematically fit $-t$
+  distribution.}
 \label{fig:twopi_primakoff_DSelect_p1_W_100000_sum}
 \end{figure}
 The acceptance is quite high at about 40\%. However, there is also
@@ -185,5 +202,6 @@ significant slewing due to resolution in most variables of
 interest.  The
 relatively poor resolution in $\phi_{\pi\pi}$ results in dilution of
 the measured azimuthal dependence, which will need to be adjusted
-based on simulation. Finally the measured $-t$ resolution roughly reproduces the generated slope despite the smearing of high rate regions down to low rate
-regions.
+based on simulation. Finally the measured $-t$ resolution roughly
+reproduces the generated slope despite the smearing of
+high-rate regions down to low-rate regions.
