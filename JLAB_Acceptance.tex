@@ -54,20 +54,20 @@ reference,
 we note that the cross section for charged pions $(\pi^+\pi^-$)
 production is 10.9\,$\mu$b, a factor of 30 larger.
 
-The number of neutral-pion-Primakoff-signal events produced during 20
+The number of accepted neutral-pion Primakoff-signal events obtained during 20
 PAC days is shown in Fig.~\ref{fig:sigma_2pi0_figs_3}. The impacts of
 detector trigger, acceptance and resolution are discussed in the next
 section.
 \begin{figure}[tph]
 \centering
 \includegraphics[page=3,width=4.75in]{figures/sigma_2pi0_figs.pdf}
-\caption{Estimated production rate  for $\gamma \rm{Pb}\rightarrow \pi^0\pi^0\,\rm{Pb}$ as a function 2$\pi$ mass. For this calculation, it is assumed the detector has perfect resolution and has a linearly increasing efficiency from zero at threshold up to 0.4 at 0.34 GeV (see top right of Fig.\,\ref{fig:twopi_primakoff_DSelect_p1_W_100000_sum} ).
+\caption{Estimated production rate  for $\gamma \rm{Pb}\rightarrow \pi^0\pi^0\,\rm{Pb}$ as a function 2$\pi$ mass. For this calculation, it is assumed the detector has perfect resolution and a combined efficiency and acceptance of 0.4 (see top right of Fig.\,\ref{fig:twopi_primakoff_DSelect_p1_W_100000_sum} ).
 \label{fig:sigma_2pi0_figs_3}}
 \end{figure}
 
 \subsection{Detector resolution}
 \label{sec:acceptance}
-The response of the GlueX detector to neutral pion Primakoff events
+The response of the GlueX detector to $\pi^0\pi^0$-Primakoff events
 was simulated using the standard GlueX generation and reconstruction
 tools, but with the specific geometry for the CPP experiment. The schematic of the detector configuration is shown in
 Fig.~\ref{fig:GlueX_cpp}. The primary differences between the
@@ -84,7 +84,7 @@ which is used for these studies, includes most changes except for the
 addition of the muon chambers, which are not needed. In addition, the
 microscope geometry has not been modified and we use the tagger
 hodoscope for the region of interest in the simulation. The slightly reduced
-energy of the hodoscope relative to the microscope has little impact
+energy resolution of the hodoscope relative to the microscope has little impact
 and the gaps between counters are ignored when simulating the tagged
 flux.
 \begin{figure}[h!]
@@ -101,7 +101,7 @@ symmetrized between the two identical $\pi^0$'s by AmpTools. One
 hundred thousand events of Primakoff and nuclear coherent interactions 
 (see Section\,\ref{sec:NCback}) were generated with $M_{\pi\pi}<$0.9 GeV.
 We used random triggers from run 30401\footnote{Run 30401 is a low-intensity run for GlueX,
-but represents considerably higher background than expected for this experiment.} to add tagger accidentals 
+but has considerably higher accidental backgrounds than expected for this experiment.} to add tagger accidentals 
 and random hits in the drift chambers. These events were fed to GEANT4 to track particles, and subsequently
 processed using \emph{mcsmear} to simulate the detector response. The
 simulated events were then analyzed using the GlueX event filter to
@@ -142,7 +142,7 @@ measure the asymmetry due to the photon beam polarization.
 \caption{Left: Difference between measured and generated momentum. Center: Difference between kinematically fit and generated momentum. The central peak has a width of about 2\%. Right: Difference between the kinematically fit azimuthal angle $\phi_{\pi\pi}$ and its generated value.
 \label{fig:DeltapDeltaPhi_signal_DSelector}}
 \end{figure}
-The resolution of the 2$\pi$ invariant mass is shown in Fig.~\ref{fig:Resolution_Mpipittag_signal_DSelector}, along with the resolution of Mandelstam $-t$, and the reconstructed time resolution. The mass resolution is about 12~MeV.
+The resolution of the 2$\pi$ invariant mass is shown in Fig.~\ref{fig:Resolution_Mpipittag_signal_DSelector}, along with the resolution of Mandelstam $-t$, and the resolution of the scattering angle $\theta_{\pi\pi}$. The mass resolution is about 12~MeV and the scattering angle resoltuion is 0.1 degrees.
 \begin{figure}[tph]
 \centering
 \includegraphics[width=6in]{figures/Resolution_Mpipittag_signal_DSelector.pdf}
@@ -170,9 +170,9 @@ lengths), we used the empty target rate plus the difference between
 LH2 and empty target rates scaled by a factor of 1.7. That gives a
 trigger rate of 9~kHz for 20~nA of beam current.
 
-\begin{figure}[tph]
+\begin{figure}[tbh]
 \centering
-\includegraphics[width=3in]{figures/fcalrate_vs_beam.pdf}
+\includegraphics[width=3in]{figures/fcalrate_vs_beam.png}
 \caption{Estimated FCAL trigger rate for a 1~GeV
   total energy threshold for LH2 (solid squares) and empty
   (empty squares) targets.
@@ -198,10 +198,10 @@ reconstruction was described in the previous section.
 \label{fig:twopi_primakoff_DSelect_p1_W_100000_sum}
 \end{figure}
 The acceptance is quite high at about 40\%. However, there is also
-significant slewing due to resolution in most variables of
+significant slewing due to resolution in several variables of
 interest.  The
 relatively poor resolution in $\phi_{\pi\pi}$ results in dilution of
 the measured azimuthal dependence, which will need to be adjusted
 based on simulation. Finally the measured $-t$ resolution roughly
-reproduces the generated slope despite the smearing of
-high-rate regions down to low-rate regions.
+reproduces the generated slope despite the smearing 
+from low to high $-t$.
